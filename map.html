@@ -76,10 +76,23 @@
             height: 100%;
         }
 
-        /* Overriding Google Charts default styles for thicker borders */
+        /* Overriding Google Charts default styles for thicker borders & Animation */
         #regions_div svg path {
             stroke: #ffffff !important;
             stroke-width: 2px !important;
+            /* Animation properties */
+            transition: transform 0.2s ease-out, filter 0.2s ease-out;
+            transform-box: fill-box;       /* Ensures scale happens from center of the state */
+            transform-origin: center;      /* Ensures scale happens from center of the state */
+            cursor: pointer;
+        }
+
+        /* Hover effect to make state "pop up" */
+        #regions_div svg path:hover {
+            transform: scale(1.015) translateY(-2px); /* Slight zoom and lift */
+            filter: drop-shadow(0 5px 8px rgba(0,0,0,0.3)); /* Drop shadow for depth */
+            z-index: 1000;
+            position: relative;
         }
 
         /* Info Panel Section */
@@ -370,27 +383,32 @@
 
         function drawRegionsMap() {
             // Create data table with all US States
-            // Column 1: State Code (ISO 3166-2:US), Column 2: Label (Optional value for coloring)
-            var data = google.visualization.arrayToDataTable([
-                ['State', 'Contract Status'],
-                ['US-AL', 1], ['US-AK', 1], ['US-AZ', 1], ['US-AR', 1], ['US-CA', 1],
-                ['US-CO', 1], ['US-CT', 1], ['US-DE', 1], ['US-FL', 1], ['US-GA', 1],
-                ['US-HI', 1], ['US-ID', 1], ['US-IL', 1], ['US-IN', 1], ['US-IA', 1],
-                ['US-KS', 1], ['US-KY', 1], ['US-LA', 1], ['US-ME', 1], ['US-MD', 1],
-                ['US-MA', 1], ['US-MI', 1], ['US-MN', 1], ['US-MS', 1], ['US-MO', 1],
-                ['US-MT', 1], ['US-NE', 1], ['US-NV', 1], ['US-NH', 1], ['US-NJ', 1],
-                ['US-NM', 1], ['US-NY', 1], ['US-NC', 1], ['US-ND', 1], ['US-OH', 1],
-                ['US-OK', 1], ['US-OR', 1], ['US-PA', 1], ['US-RI', 1], ['US-SC', 1],
-                ['US-SD', 1], ['US-TN', 1], ['US-TX', 1], ['US-UT', 1], ['US-VT', 1],
-                ['US-VA', 1], ['US-WA', 1], ['US-WV', 1], ['US-WI', 1], ['US-WY', 1]
-            ]);
+            // Column 1: State Code (ISO 3166-2:US), Column 2: Contract Count (Number)
+            var stateCodes = [
+                'US-AL', 'US-AK', 'US-AZ', 'US-AR', 'US-CA', 'US-CO', 'US-CT', 'US-DE', 'US-FL', 'US-GA',
+                'US-HI', 'US-ID', 'US-IL', 'US-IN', 'US-IA', 'US-KS', 'US-KY', 'US-LA', 'US-ME', 'US-MD',
+                'US-MA', 'US-MI', 'US-MN', 'US-MS', 'US-MO', 'US-MT', 'US-NE', 'US-NV', 'US-NH', 'US-NJ',
+                'US-NM', 'US-NY', 'US-NC', 'US-ND', 'US-OH', 'US-OK', 'US-OR', 'US-PA', 'US-RI', 'US-SC',
+                'US-SD', 'US-TN', 'US-TX', 'US-UT', 'US-VT', 'US-VA', 'US-WA', 'US-WV', 'US-WI', 'US-WY'
+            ];
+
+            var dataRows = [['State', 'Contracts']];
+            
+            stateCodes.forEach(function(code) {
+                var count = (contractData[code]) ? contractData[code].length : 0;
+                dataRows.push([code, count]);
+            });
+
+            var data = google.visualization.arrayToDataTable(dataRows);
 
             var options = {
                 region: 'US', // Focus on United States
                 resolution: 'provinces', // Show state borders
                 displayMode: 'regions',
                 colorAxis: {
-                    colors: ['#0076CE'] // Dell Blue for the states
+                    // Min count to Max count
+                    // Using Dell Blue gradient: lighter (#449bd5) to core Dell Blue (#0076CE) to Darker (#00447C)
+                    colors: ['#449bd5', '#00447C'] 
                 },
                 backgroundColor: {
                     fill: 'transparent'
@@ -428,10 +446,7 @@
             const stateTitle = document.getElementById('state-title');
             const contractList = document.getElementById('contract-list');
             
-            // Map the state code to a readable name (Optional, or just use the code)
-            // Ideally we'd have a mapping, but for now we can rely on the user knowing US-TX is Texas
-            // Or we can extract it if we had a mapping object. 
-            // For simplicity, let's clean the string:
+            // Map the state code to a readable name
             const cleanName = stateCode.replace('US-', '');
             
             stateTitle.textContent = "State: " + cleanName;

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dell Technologies | State & Local Government Contracts</title>
+    <!-- Load Google Charts Library -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <style>
+        :root {
+            --dell-blue: #0076CE;
+            --dell-dark-blue: #00447C;
+            --dell-gray: #444444;
+            --dell-light-gray: #f0f0f0;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: "Roboto", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: var(--dell-gray);
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: var(--white);
+            border-bottom: 3px solid var(--dell-blue);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            flex-shrink: 0;
+        }
+
+        header h1 {
+            color: var(--dell-blue);
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+
+        header .subtitle {
+            margin-left: 1rem;
+            padding-left: 1rem;
+            border-left: 1px solid #ccc;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Main Layout */
+        .container {
+            display: flex;
+            flex: 1;
+            height: 100%;
+        }
+
+        /* Map Section */
+        .map-section {
+            flex: 2;
+            padding: 2rem;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        #regions_div {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Info Panel Section */
+        .info-panel {
+            flex: 1;
+            background-color: var(--dell-light-gray);
+            padding: 2rem;
+            border-left: 1px solid #ddd;
+            overflow-y: auto;
+            box-shadow: inset 5px 0 10px rgba(0,0,0,0.02);
+            min-width: 350px;
+        }
+
+        /* State Info Styling */
+        .state-title {
+            color: var(--dell-blue);
+            font-size: 2rem;
+            margin-top: 0;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .instruction-text {
+            color: #777;
+            font-style: italic;
+            text-align: center;
+            margin-top: 50%;
+        }
+
+        .contract-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--dell-blue);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+
+        .contract-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .contract-name {
+            font-weight: bold;
+            color: var(--dell-dark-blue);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .contract-details {
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .contract-details strong {
+            color: #333;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #eef4fb;
+            color: var(--dell-blue);
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column;
+                overflow-y: auto;
+            }
+            .map-section {
+                height: 50vh;
+                min-height: 400px;
+            }
+            .info-panel {
+                min-height: 50vh;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>DELL <span style="font-weight:normal">Technologies</span></h1>
+        <div class="subtitle">State & Local Government Contract Locator</div>
+    </header>
+
+    <div class="container">
+        <div class="map-section">
+            <div id="regions_div"></div>
+        </div>
+
+        <div class="info-panel" id="info-panel">
+            <h2 class="state-title" id="state-title">Select a State</h2>
+            <div id="contract-list">
+                <p class="instruction-text">Click on any state in the map to view available State & Local Government contracts.</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        // 1. Contract Data Database
+        // Updated with 2023-2028 NASPO Cycle Data & Specific State Contracts
+        const contractData = {
+            "US-AL": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services. Lead State: MN." },
+                { name: "GSA Schedule", type: "Federal Flow-down", number: "GS-35F-059DA", desc: "Available via Cooperative Purchasing Program." }
+            ],
+            "US-AK": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services. Lead State: MN." }
+            ],
+            "US-AZ": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Participating Addendum likely applies. Computer Equipment, Peripherals & Related Services." }
+            ],
+            "US-AR": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services. Lead State: MN." }
+            ],
+            "US-CA": [
+                { name: "California Statewide Contract", type: "State Contract", number: "1-22-70-31B", desc: "PC Goods - Dell Chromebooks and Monitors. Mandatory for state agencies." },
+                { name: "CMAS", type: "State Contract", number: "3-12-70-2247E", desc: "California Multiple Award Schedules (Information Technology Goods & Services)." },
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Participating Addendum 7-15-70-34-003 (Check for latest PA)." }
+            ],
+            "US-CO": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services. Lead State: MN." }
+            ],
+            "US-CT": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services." }
+            ],
+            "US-DE": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services." }
+            ],
+            "US-FL": [
+                { name: "State of Florida ACS", type: "State Contract", number: "43210000-23-NASPO-ACS", desc: "Alternate Contract Source (ACS) for Computer Equipment, Peripherals & Services." },
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Underlying Master Agreement for ACS." }
+            ],
+            "US-GA": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services." },
+                { name: "Statewide Contract (EUC)", type: "State Contract", number: "99999-SPD-T20120501-0006", desc: "End User Computing (Verify current renewal status)." }
+            ],
+            "US-HI": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services." }
+            ],
+            "US-ID": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services." }
+            ],
+            "US-IL": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services." }
+            ],
+            "US-IN": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services." }
+            ],
+            "US-IA": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services." }
+            ],
+            "US-KS": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services." }
+            ],
+            "US-KY": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services." }
+            ],
+            "US-LA": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services." }
+            ],
+            "US-ME": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services." }
+            ],
+            "US-MD": [
+                { name: "MEEC", type: "Education", number: "UMD-972016", desc: "Maryland Education Enterprise Consortium (MEEC) Hardware Agreement." },
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services." }
+            ],
+            "US-MA": [
+                { name: "Massachusetts ITC73", type: "State Contract", number: "ITC73", desc: "IT Hardware and Services (Expires Jan 31, 2028). Replaces ITC47." },
+                { name: "MHEC", type: "Education", number: "MC15-F04", desc: "Massachusetts Higher Education Consortium." }
+            ],
+            "US-MI": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services." }
+            ],
+            "US-MN": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Lead State Master Agreement. The primary contract for this cycle." }
+            ],
+            "US-MS": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services." },
+                { name: "EPL", type: "State Contract", number: "3760", desc: "Express Products List (EPL) for IT Hardware." }
+            ],
+            "US-MO": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services." }
+            ],
+            "US-MT": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services." }
+            ],
+            "US-NE": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services." }
+            ],
+            "US-NV": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services." }
+            ],
+            "US-NH": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services." }
+            ],
+            "US-NJ": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services." }
+            ],
+            "US-NM": [
+                { name: "State of New Mexico", type: "State Contract", number: "30-00000-23-00067", desc: "IT Equipment and Services." },
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment." }
+            ],
+            "US-NY": [
+                { name: "NYS OGS Umbrella", type: "State Contract", number: "PD67644", desc: "Information Technology Umbrella Contract - Manufacturer Based. Group 73600, Award 22876." },
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment." }
+            ],
+            "US-NC": [
+                { name: "NC State Term Contract", type: "State Contract", number: "204A (ITS-400203)", desc: "Microcomputers and Peripherals. Mandatory for Executive State Agencies." },
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Backup/Alternative source." }
+            ],
+            "US-ND": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services." }
+            ],
+            "US-OH": [
+                { name: "Ohio STS", type: "State Contract", number: "534278", desc: "State Term Schedule (STS) for Computers, Software, & Supplies." },
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment." }
+            ],
+            "US-OK": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services." }
+            ],
+            "US-OR": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services." }
+            ],
+            "US-PA": [
+                { name: "COSTARS", type: "Cooperative", number: "003-051", desc: "IT Hardware Contract (COSTARS-3)." },
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment." }
+            ],
+            "US-RI": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services." }
+            ],
+            "US-SC": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services." }
+            ],
+            "US-SD": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services." }
+            ],
+            "US-TN": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services." }
+            ],
+            "US-TX": [
+                { name: "Texas DIR", type: "State Contract", number: "DIR-CPO-5792", desc: "Dept of Information Resources (DIR). Also see C000001269299." },
+                { name: "TXMAS", type: "State Contract", number: "TXMAS-18-000", desc: "Texas Multiple Award Schedule." }
+            ],
+            "US-UT": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services." }
+            ],
+            "US-VT": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services." }
+            ],
+            "US-VA": [
+                { name: "VASCUPP", type: "Education", number: "UVA845196", desc: "Virginia Association of State College & University Purchasing Professionals (Direct Dell)." },
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment." }
+            ],
+            "US-WA": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services." }
+            ],
+            "US-WV": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services." }
+            ],
+            "US-WI": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services." }
+            ],
+            "US-WY": [
+                { name: "NASPO ValuePoint (2023-2028)", type: "Cooperative", number: "Master Agreement #23026", desc: "Computer Equipment, Peripherals & Related Services." }
+            ]
+        };
+
+        // 2. Load Google Charts
+        google.charts.load('current', {
+            'packages': ['geochart'],
+        });
+        
+        google.charts.setOnLoadCallback(drawRegionsMap);
+
+        function drawRegionsMap() {
+            // Create data table with all US States
+            // Column 1: State Code (ISO 3166-2:US), Column 2: Label (Optional value for coloring)
+            var data = google.visualization.arrayToDataTable([
+                ['State', 'Contract Status'],
+                ['US-AL', 1], ['US-AK', 1], ['US-AZ', 1], ['US-AR', 1], ['US-CA', 1],
+                ['US-CO', 1], ['US-CT', 1], ['US-DE', 1], ['US-FL', 1], ['US-GA', 1],
+                ['US-HI', 1], ['US-ID', 1], ['US-IL', 1], ['US-IN', 1], ['US-IA', 1],
+                ['US-KS', 1], ['US-KY', 1], ['US-LA', 1], ['US-ME', 1], ['US-MD', 1],
+                ['US-MA', 1], ['US-MI', 1], ['US-MN', 1], ['US-MS', 1], ['US-MO', 1],
+                ['US-MT', 1], ['US-NE', 1], ['US-NV', 1], ['US-NH', 1], ['US-NJ', 1],
+                ['US-NM', 1], ['US-NY', 1], ['US-NC', 1], ['US-ND', 1], ['US-OH', 1],
+                ['US-OK', 1], ['US-OR', 1], ['US-PA', 1], ['US-RI', 1], ['US-SC', 1],
+                ['US-SD', 1], ['US-TN', 1], ['US-TX', 1], ['US-UT', 1], ['US-VT', 1],
+                ['US-VA', 1], ['US-WA', 1], ['US-WV', 1], ['US-WI', 1], ['US-WY', 1]
+            ]);
+
+            var options = {
+                region: 'US', // Focus on United States
+                resolution: 'provinces', // Show state borders
+                displayMode: 'regions',
+                colorAxis: {
+                    colors: ['#0076CE'] // Dell Blue for the states
+                },
+                backgroundColor: {
+                    fill: 'transparent'
+                },
+                datalessRegionColor: '#f5f5f5',
+                defaultColor: '#f5f5f5',
+                legend: 'none', // Hide the color legend
+                tooltip: {
+                    textStyle: { color: '#444' },
+                    showColorCode: false
+                }
+            };
+
+            var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+            // 3. Add Selection Listener
+            google.visualization.events.addListener(chart, 'select', function() {
+                var selection = chart.getSelection();
+                if (selection.length > 0) {
+                    var stateCode = data.getValue(selection[0].row, 0);
+                    updateSidePanel(stateCode);
+                }
+            });
+
+            chart.draw(data, options);
+            
+            // Handle Window Resize
+            window.addEventListener('resize', function() {
+                chart.draw(data, options);
+            });
+        }
+
+        // 4. Function to update the sidebar
+        function updateSidePanel(stateCode) {
+            const stateTitle = document.getElementById('state-title');
+            const contractList = document.getElementById('contract-list');
+            
+            // Map the state code to a readable name (Optional, or just use the code)
+            // Ideally we'd have a mapping, but for now we can rely on the user knowing US-TX is Texas
+            // Or we can extract it if we had a mapping object. 
+            // For simplicity, let's clean the string:
+            const cleanName = stateCode.replace('US-', '');
+            
+            stateTitle.textContent = "State: " + cleanName;
+
+            const contracts = contractData[stateCode] || [];
+
+            if (contracts.length > 0) {
+                let html = '';
+                contracts.forEach(c => {
+                    html += `
+                        <div class="contract-card">
+                            <span class="badge">${c.type}</span>
+                            <span class="contract-name">${c.name}</span>
+                            <div class="contract-details">
+                                <strong>Contract #:</strong> ${c.number}<br>
+                                ${c.desc}
+                            </div>
+                        </div>
+                    `;
+                });
+                contractList.innerHTML = html;
+            } else {
+                contractList.innerHTML = `
+                    <div class="contract-card" style="border-left-color: #ccc;">
+                        <span class="contract-name">No Data Loaded</span>
+                        <div class="contract-details">
+                            We currently don't have specific contract data loaded for ${cleanName} in this demo.
+                            <br><br>
+                            <em>Standard GSA schedules likely apply.</em>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>

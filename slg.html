@@ -217,374 +217,341 @@
         // Populated from attached "SLED contracts.xlsx" where visible.
         const contractData = {
             "AL": [
-                { name: "HW/SW AL Stand. Term", entity: "State of Alabama", number: "HW/SW AL Stand. Ter", desc: "N/A, Expires 2079-01-01" },
-                { name: "ALJP2022-009 Adobe Agreement", entity: "Alabama State Department of Education", number: "ALJP2019-005", desc: "ALJP2022-009 Adobe Agreement Expires 2026-06-30" },
-                { name: "ALJP2022-048 Bitdefender", entity: "Alabama State Department of Education", number: "ALJP2022-048", desc: "ALJP2022-048 Bitdefender Expires 2026-06-30" },
-                { name: "ALJP2022-081 Dell Hardware Agreement", entity: "Alabama State Department of Education", number: "ALJP2022-081", desc: "ALJP2022-081 Dell Hardware Agreement Expires 2026-06-30" },
-                { name: "ALJP2022-087 Dropbox", entity: "Alabama State Department of Education", number: "ALJP2022-087", desc: "ALJP2022-087 Dropbox Expires 2026-06-30" },
-                { name: "Addendum to Midwestern Higher Education Commission (MHEC)", entity: "University of Alabama", number: "MHEC-04152022", desc: "University of Alabama Addendum to Midwestern Higher Education Commission MHEC-04152022 Contract Expires 2029-06-30" },
-                { name: "ALJP2022-129 Ivanti", entity: "Alabama State Department of Education", number: "ALJP2022-129", desc: "ALJP2022-129 Ivanti Expires 2026-06-30" },
-                { name: "ALJP2022-142 Lightspeed Systems", entity: "Alabama State Department of Education", number: "ALJP2022-142", desc: "ALJP2022-142 Lightspeed Systems Expires 2026-06-30" },
-                { name: "ALJP2022-161 McAfee", entity: "Alabama State Department of Education", number: "ALJP2022-161", desc: "ALJP2022-161 McAfee Expires 2026-06-30" },
-                { name: "ALJP2022-168 Microsoft Software", entity: "Alabama State Department of Education", number: "ALJP2022-168", desc: "ALJP2022-168 Microsoft Software Expires 2026-06-30" },
-                { name: "ALJP2022-194 Quest", entity: "Alabama State Department of Education", number: "ALJP2022-194", desc: "ALJP2022-194 Quest Expires 2026-06-30" },
-                { name: "ALJP2022-238 VMware", entity: "Alabama State Department of Education", number: "ALJP2022-238", desc: "ALJP2022-238 VMware Expires 2026-06-30" },
-                { name: "State of Alabama - Dell Products and Services (PCs and Accessories)", entity: "Alabama State Department of Education", number: "MA230000003898", desc: "DOL on CSG products, third party and related services - ISG, storage and APEX restricted Expires 2026-03-14" },
-                { name: "NASPO SVAR PA", entity: "Alabama State Department of Education", number: "CTR060024 / MA230000", desc: "Standalone third party software Dell as a reseller contract.. APEX FOD/DCU, Dell Branded HW & SW restricted. Expires 2027-04-24" }
+                { name: "HW/SW AL Stand. Term", entity: "Alabama, State of", number: "HW/SW AL Stand. Ter", expires: "01-01-2079", desc: " " },
+                { name: "ALJP2022-009 Adobe Agreement - Alabama", entity: "Alabama State Department of Education", number: "ALJP2019-005", expires: "06-30-2026", desc: "ALJP2022-009 Adobe Agreement" },
+                { name: "ALJP2022-048 Bitdefender", entity: "Alabama State Department of Education", number: "ALJP2022-048", expires: "06-30-2026", desc: "ALJP2022-048 Bitdefender" },
+                { name: "ALJP2022-081 Dell Hardware Agreement - Alabama", entity: "Alabama State Department of Education", number: "ALJP2022-081", expires: "06-30-2026", desc: "ALJP2022-081 Dell Hardware Agreement" },
+                { name: "ALJP2022-087 Dropbox", entity: "Alabama State Department of Education", number: "ALJP2022-087", expires: "06-30-2026", desc: "ALJP2022-087 Dropbox" },
+                { name: "University of Alabama Addendum to Midwestern Higher Education Commission (MHEC)", entity: "University of Alabama", number: "MHEC-04152022", expires: "06-30-2029", desc: "University of Alabama Addendum to Midwestern Higher Education Commission MHEC-04152022 Contract" },
+                { name: "ALJP2022-129 Ivanti", entity: "Alabama State Department of Education", number: "ALJP2022-129", expires: "06-30-2026", desc: "ALJP2022-129 Ivanti" },
+                { name: "ALJP2022-142 Lightspeed Systems", entity: "Alabama State Department of Education", number: "ALJP2022-142", expires: "06-30-2026", desc: "ALJP2022-142 Lightspeed Systems" },
+                { name: "ALJP2022-161 McAfee", entity: "Alabama State Department of Education", number: "ALJP2022-161", expires: "06-30-2026", desc: "ALJP2022-161 McAfee" },
+                { name: "ALJP2022-168 Microsoft Software", entity: "Alabama State Department of Education", number: "ALJP2022-168", expires: "06-30-2026", desc: "ALJP2022-168 Microsoft Software" },
+                { name: "ALJP2022-194 Quest", entity: "Alabama State Department of Education", number: "ALJP2022-194", expires: "06-30-2026", desc: "ALJP2022-194 Quest" },
+                { name: "ALJP2022-238 VMware", entity: "Alabama State Department of Education", number: "ALJP2022-238", expires: "06-30-2026", desc: "ALJP2022-238 VMware" },
+                { name: "State of Alabama - Dell Products and Services (PCs and Accessories)", entity: "State of Alabama", number: "MA230000003898", expires: "03-14-2026", desc: "DOL on CSG products, third party and related services - ISG, storage and APEX restricted" },
+                { name: "NASPO SVAR - Alabama PA", entity: "State of Alabama", number: "CTR060024 / MA230000", expires: "04-24-2027", desc: "Standalone third party software Dell as a reseller contract.. APEX FOD/DCU, Dell Branded HW & SW restricted." },
             ],
             "AK": [
-                { name: "Dell NASPO Computer Equipment PA - Alaska", entity: "State Contract", number: "23026 / 2024-COMP-00", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" }
+                { name: "Dell NASPO Computer Equipment PA - Alaska", entity: "State of Alaska", number: "23026 / 2024-COMP-00", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
             ],
             "AZ": [
-                { name: "Dell Contract for Goods and/or Services - Microsoft EES for Tri-U (ABOR)", entity: "State Contract", number: "P22JS004", desc: "Microsoft Only;  NAU, ASU and UA Expires 2028-06-30" },
-                { name: "NAU Contract For Goods and Services", entity: "State Contract", number: "P22KJ006", desc: "DOL discounts on full catalog - Apex restricted Expires 2026-03-09" },
-                { name: "Dell NASPO Computer Equipment PA - Arizona", entity: "State Contract", number: "23026 / CTR068890", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" },
-                { name: "NASPO SVAR - Arizona PA", entity: "State Contract", number: "CTR060024", desc: "Standalone third party software Dell as a reseller contract.. APEX FOD/DCU, Dell Branded HW & SW restricted. Expires 2027-04-24" },
+                { name: "Dell Contract for Goods and/or Services - Microsoft EES for Tri-U (ABOR)", entity: "Arizona Board of Regents, Tri-U Universities", number: "P22JS004", expires: "06-30-2028", desc: "Microsoft Only;  NAU, ASU and UA" },
+                { name: "NAU Contract For Goods and Services", entity: "Arizona Board of Regents on behalf of Northern Ari", number: "P22KJ006", expires: "03-09-2026", desc: "DOL discounts on full catalog - Apex restricted" },
+                { name: "Dell NASPO Computer Equipment PA - Arizona", entity: "State of Arizona", number: "23026 / CTR068890", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
+                { name: "NASPO SVAR - Arizona PA", entity: "State of Arizona", number: "CTR060024", expires: "04-24-2027", desc: "Standalone third party software Dell as a reseller contract.. APEX FOD/DCU, Dell Branded HW & SW restricted." },
             ],
             "AR": [
-                { name: "Board of Trustees, University of Arkansas - MHEC Rebate Piggyback Agreement", entity: "State Contract", number: "MHEC-04152022", desc: "Full catalog including APEX and Third Party Expires 2029-06-30" },
-                { name: "NASPO SVAR - Arkansas PA", entity: "State Contract", number: "CTR060024 / 46000524", desc: "Standalone third party software Dell as a reseller contract.. APEX FOD/DCU, Dell Branded HW & SW restricted. Expires 2027-04-24" },
-                { name: "Dell NASPO Computer Equipment PA - Arkansas", entity: "State Contract", number: "23026 / 4600053723", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" }
-
+                { name: "Board of Trustees, University of Arkansas - MHEC Rebate Piggyback Agreement", entity: "Board of Trustees of the University of Arkansas", number: "MHEC-04152022", expires: "06-30-2029", desc: "Full catalog including APEX and Third Party" },
+                { name: "NASPO SVAR - Arkansas PA", entity: "State of Arkansas", number: "CTR060024 / 46000524", expires: "04-24-2027", desc: "Standalone third party software Dell as a reseller contract.. APEX FOD/DCU, Dell Branded HW & SW restricted." },
+                { name: "Dell NASPO Computer Equipment PA - Arkansas", entity: "State of Arkansas", number: "23026 / 4600053723", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
             ],
             "CA": [
-                { name: "Bio-Rad Lab International Customer Purchase Agreement", entity: "State Contract", number: "CPA 2005 - CA", desc: "Fixed pricing contract on items listed on Exhibit A Expires 2079-01-01" },
-                { name: "Keysight Technologies, Inc. (Agilent) Purchase Agreement", entity: "State Contract", number: "", desc: "DOL applied on Client product lines. Discount % varies per country/region Expires 2079-01-01" },
-                { name: "Contra Costa, CA - Purchase Agreement For Products and Services", entity: "State Contract", number: "23-614", desc: "Fixed Confgs. Non-standard Dell Branced HW, SW, and 3rd party products in scope with no price obligation. APEX restricted. Expires 2079-01-01" },
-                { name: "Scripps Health Purchase Agreement", entity: "State Contract", number: "", desc: "Fixed pricing on specific software licences Expires 2079-01-01" },
-                { name: "Stanford University MCCA", entity: "State Contract", number: "Stanford Univ MCCA 2", desc: "DOL on ISG & CSG products, APEX Restricted. Expires 2026-09-30" },
-                { name: "Master VPA City of Long Beach, California", entity: "State Contract", number: "28280 / 0300092", desc: "Dell Branded HW and SW, 3rd party products included.  APEX Restricted. Expires 2079-01-01" },
-                { name: "UCOP Rebate Agreement", entity: "State Contract", number: "2018-000068", desc: "Purchase agreement  full catalog with DOL. Apex and certain softwares are restricted Expires 2026-05-31" },
-                { name: "County of Riverside LSP Agreement for Microsoft", entity: "State Contract", number: "PSA-0001524 / 808444", desc: "MS Licensing Solution Provider Agreement Expires 2028-01-31" },
-                { name: "County of Los Angeles - Software - MS Enterprise Agreement", entity: "State Contract", number: "MA-IS-XXXX", desc: "Microsoft Enterprise Agreement - MS software only Expires 2026-11-30" },
-                { name: "FCCC Adoption of UCOP Participation Agreement", entity: "State Contract", number: "2018-000068 / 000042", desc: "Full Dell Catalog with DOL pricing -Apex, Alienware, cloud and select software restricted Expires 2026-05-31" },
-                { name: "Sacramento, California MUD - Product, License, and Support Agreement", entity: "State Contract", number: "4600000907", desc: "Dell Branded HW, SW & Services. APEX Restricted. EMC pricing table being managed by sales team. Expires 2026-08-31" },
-                { name: "State of California DGS Microsoft Azure", entity: "State Contract", number: "20-14311", desc: "Microsoft Azure only - FedRamp High Expires 2026-05-31" },
-                { name: "California DGS IaaS and PaaS Product Agreement", entity: "State Contract", number: "20-14312", desc: "Microsoft Azure only - FedRamp Moderate Expires 2026-05-31" },
-                { name: "Dell California DGS PC Goods", entity: "State Contract", number: "1-22-70-31B", desc: "Enterprise Chromebooks and Monitors Fixed price on specified configurations only. Apex Restricted. Expires 2026-06-30" },
-                { name: "California Multiple Awards Schedule (CMAS)", entity: "State Contract", number: "3-22-06-1045", desc: "3-22-06-1045 (Replaces contract C000000008783) Services contract - hardware and apex is restricted Expires 2027-01-19" },
-                { name: "UCOP SW VAR Rebate Agreement", entity: "State Contract", number: "2022003449", desc: "Authorized Value-Added Reseller (VAR) of OEM Software - Microsoft, Adobe, Microfocus, Netskope Expires 2027-12-15" },
-                { name: "Dell NASPO Computer Equipment PA - California", entity: "State Contract", number: "23026 / 7-23-70-55-0", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" },
-                { name: "Dell NASPO Computer Equipment PA - Orange County, California", entity: "State Contract", number: "23026 / RCA-017-2401", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" },
-                { name: "Dell NASPO Computer Equipment PA - City of Los Angeles, California", entity: "State Contract", number: "23026 / 7-23-70-55-0", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" },
-                { name: "Dell NASPO Computer Equipment PA - Fontana USD, California", entity: "State Contract", number: "23026 / 7-23-70-55-0", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" },
-                { name: "Dell NASPO Computer Equipment PA - County of San Diego, California - Sheriff Department", entity: "State Contract", number: "23026 / 7-23-70-55-0", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" },
-                { name: "Dell NASPO Computer Equipment PA - County of San Diego, California - District Attorney", entity: "State Contract", number: "23026 / 7-23-70-55-0", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" },
-                { name: "County of Los Angeles - Equipment Maintenance Services Class 10 Storage Equipment", entity: "State Contract", number: "Contract GCS-I10762-", desc: "Renewals Only; Equipment Maintenance Services Class 10 Storage Equipment (DELL-EMC) Expires 2027-06-30" },
-                { name: "County of Riverside LSP Agreement for Microsoft", entity: "State Contract", number: "ITARC-00934 / 808444", desc: "MS Licensing Solution Provider Agreement Expires 2027-10-31" },
-                { name: "USC Customer Sales Agreement", entity: "State Contract", number: "", desc: "Full Dell Catalog, including 3rd Party and APEX Expires 2028-05-02" }
+                { name: "Bio-Rad Lab International Customer Purchase Agreement", entity: "Bio-Rad Laboratories, Inc.", number: "CPA 2005 - CA", expires: "01-01-2079", desc: "Fixed pricing contract on items listed on Exhibit A" },
+                { name: "Keysight Technologies, Inc. (Agilent) Purchase Agreement", entity: "Keysight Technologies, Inc. (Agilent)", number: "", expires: "01-01-2079", desc: "DOL applied on Client product lines. Discount % varies per country/region" },
+                { name: "Contra Costa, CA - Purchase Agreement For Products and Services", entity: "County of Contra Costa, CA", number: "23-614", expires: "01-01-2079", desc: "Fixed Confgs. Non-standard Dell Branced HW, SW, and 3rd party products in scope with no price obligation. APEX restricted." },
+                { name: "Scripps Health Purchase Agreement", entity: "Scripps Health", number: "", expires: "01-01-2079", desc: "Fixed pricing on specific software licences" },
+                { name: "Stanford University MCCA", entity: "Board of Trustees of the Leland Stanford Junior Un", number: "Stanford Univ MCCA 2", expires: "09-30-2026", desc: "DOL on ISG & CSG products, APEX Restricted." },
+                { name: "Master VPA City of Long Beach, California", entity: "City of Long Beach, California", number: "28280 / 0300092", expires: "01-01-2079", desc: "Dell Branded HW and SW, 3rd party products included.  APEX Restricted." },
+                { name: "UCOP Rebate Agreement", entity: "Regents of the University of California (UCOP)", number: "2018-000068", expires: "05-31-2026", desc: "Purchase agreement  full catalog with DOL. Apex and certain softwares are restricted" },
+                { name: "County of Riverside LSP Agreement for Microsoft", entity: "County of Riverside California", number: "PSA-0001524 / 808444", expires: "01-31-2028", desc: "MS Licensing Solution Provider Agreement" },
+                { name: "County of Los Angeles - Software - MS Enterprise Agreement", entity: "County of Los Angeles California", number: "MA-IS-XXXX", expires: "11-30-2026", desc: "Microsoft Enterprise Agreement - MS software only" },
+                { name: "FCCC Adoption of UCOP Participation Agreement", entity: "Foundation for California Community Colleges", number: "2018-000068 / 000042", expires: "05-31-2026", desc: "Full Dell Catalog with DOL pricing -Apex, Alienware, cloud and select software restricted" },
+                { name: "Sacramento, California MUD - Product, License, and Support Agreement", entity: "Sacramento Municipal Utility District (SMUD)", number: "4600000907", expires: "08-31-2026", desc: "Dell Branded HW, SW & Services. APEX Restricted. EMC pricing table being managed by sales team." },
+                { name: "State of California DGS Microsoft Azure", entity: "State of California Dept. of General Services (DGS", number: "20-14311", expires: "05-31-2026", desc: "Microsoft Azure only - FedRamp High" },
+                { name: "California DGS IaaS and PaaS Product Agreement", entity: "State of California Dept. of General Services (DGS", number: "20-14312", expires: "05-31-2026", desc: "Microsoft Azure only - FedRamp Moderate" },
+                { name: "Dell California DGS PC Goods", entity: "California Department of General Services (DGS)", number: "1-22-70-31B", expires: "06-30-2026", desc: "Enterprise Chromebooks and Monitors Fixed price on specified configurations only. Apex Restricted." },
+                { name: "California Multiple Awards Schedule (CMAS)", entity: "State of California", number: "3-22-06-1045", expires: "01-19-2027", desc: "3-22-06-1045 (Replaces contract C000000008783) Services contract - hardware and apex is restricted" },
+                { name: "UCOP SW VAR Rebate Agreement", entity: "Regents of the University of California (UCOP)", number: "2022003449", expires: "12-15-2027", desc: "Authorized Value-Added Reseller (VAR) of OEM Software - Microsoft, Adobe, Microfocus, Netskope" },
+                { name: "Dell NASPO Computer Equipment PA - California", entity: "State of California", number: "23026 / 7-23-70-55-0", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
+                { name: "Dell NASPO Computer Equipment PA - Orange County, California", entity: "Orange County, California", number: "23026 / RCA-017-2401", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
+                { name: "Dell NASPO Computer Equipment PA - City of Los Angeles, California", entity: "City of Los Angeles, California", number: "23026 / 7-23-70-55-0", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
+                { name: "Dell NASPO Computer Equipment PA - Fontana USD, California", entity: "Fontana Unified School District, California", number: "23026 / 7-23-70-55-0", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
+                { name: "Dell NASPO Computer Equipment PA - County of San Diego, California - Sheriff Department", entity: "County of San Diego, California - Sheriff Departme", number: "23026 / 7-23-70-55-0", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
+                { name: "Dell NASPO Computer Equipment PA - County of San Diego, California - District Attorney", entity: "County of San Diego, California - District Attorne", number: "23026 / 7-23-70-55-0", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
+                { name: "County of Los Angeles - Equipment Maintenance Services Class 10 Storage Equipment", entity: "County of Los Angeles, California", number: "Contract GCS-I10762-", expires: "06-30-2027", desc: "Renewals Only; Equipment Maintenance Services Class 10 Storage Equipment (DELL-EMC)" },
+                { name: "County of Riverside LSP Agreement for Microsoft", entity: "County of Riverside California", number: "ITARC-00934 / 808444", expires: "10-31-2027", desc: "MS Licensing Solution Provider Agreement" },
+                { name: "USC Customer Sales Agreement", entity: "University of Southern California (USC)", number: "", expires: "05-02-2028", desc: "Full Dell Catalog, including 3rd Party and APEX" },
 
             ],
             "CO": [
-                { name: "University of Colorado for IT Hardware and Services", entity: "State Contract", number: "PSC-13525 / RFP 1606", desc: "Standard Configs with Fixed Price for one year, or until EOL. Maintain same DOL�s for Standard Configs. Expires 2026-05-17" },
-                { name: "Dell NASPO Computer Equipment PA - Colorado", entity: "State Contract", number: "23026 / 186019", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" }
+                { name: "University of Colorado for IT Hardware and Services", entity: "Regents of The University of Colorado", number: "PSC-13525 / RFP 1606", expires: "05-17-2026", desc: "Standard Configs with Fixed Price for one year, or until EOL. Maintain same DOL�s for Standard Configs." },
+                { name: "Dell NASPO Computer Equipment PA - Colorado", entity: "State of Colorado", number: "23026 / 186019", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
             ],
             "CT": [
-                { name: "Massachusetts ITS58 - 3rd party software", entity: "State Contract", number: "ITS58 / 13PSX0188", desc: "CT ITS58 Third party software agreement only. Expires 2026-06-30" },
-                { name: "University of Connecticut Master Agreement", entity: "State Contract", number: "UC-19126", desc: "Fixed discounts on standard configs. Category discounts on everything else. Full Dell catalog. Expires 2029-06-30" },
-                { name: "Dell NASPO Computer Equipment PA - Connecticut", entity: "State Contract", number: "23026 / 23PSX0163", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" },
-                { name: "Dell NASPO Computer Equipment PA - Connecticut", entity: "State Contract", number: "23026 / 23PSX0163", desc: "Reverse Auction - Amendment 1 Attachment 1 Exhibit B Expires 2026-06-30" }
-
+                { name: "Massachusetts ITS58 - 3rd party software", entity: "State of Connecticut, Dept. of Information Technol", number: "ITS58 / 13PSX0188", expires: "06-30-2026", desc: "CT ITS58 Third party software agreement only." },
+                { name: "University of Connecticut Master Agreement", entity: "University of Connecticut", number: "UC-19126", expires: "06-30-2029", desc: "Fixed discounts on standard configs. Category discounts on everything else. Full Dell catalog." },
+                { name: "Dell NASPO Computer Equipment PA - Connecticut", entity: "State of Connecticut", number: "23026 / 23PSX0163", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
+                { name: "Dell NASPO Computer Equipment PA - Connecticut", entity: "State of Connecticut", number: "23026 / 23PSX0163", expires: "06-30-2026", desc: "Reverse Auction - Amendment 1 Attachment 1 Exhibit B" },
             ],
             "DC": [
-                { name: "American University Volume Purchasing Agreement", type: "State Contract", number: "03000062 / 70450", desc: "CSG discounts on Premiere Page,  APEX FOD/DCU are excluded" },
-                { name: "Dell NASPO Computer Equipment PA - District of Columbia", type: "State Contract", number: "23026 / CFOPD-24-A-0", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" }
+                { name: "American University Volume Purchasing Agreement", entity: "American University, DC", number: "03000062 / 70450", expires: "01-01-2079", desc: "CSG discounts on Premiere Page,  APEX FOD/DCU are excluded" },
+                { name: "Dell NASPO Computer Equipment PA - District of Columbia", entity: "District of Columbia", number: "23026 / CFOPD-24-A-0", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
             ],
             "DE": [
-                { name: "Dell NASPO Computer Equipment PA - Delaware", entity: "State Contract", number: "23026 / DTI240024", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" }
+                { name: "Dell NASPO Computer Equipment PA - Delaware", entity: "State of Delaware", number: "23026 / DTI240024", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
             ],
             "FL": [
-                { name: "University of Florida Volume Purchase Agreement", entity: "State Contract", number: "", desc: "Full catalog including CSG, ISG, services and thirtd party products. APEX FOD/DCU are excluded Expires 2079-01-01" },
-                { name: "Broward County, Florida - Hardware and Maintenance Agreement", entity: "State Contract", number: "RFP R1247310P1 / R12", desc: "Standard Configs with DOLs listed in first amendment. Dell Branded HW, SW & Services. APEX Restricted. Expires 2026-12-30" },
-                { name: "University of South Florida Purchase Agreement", entity: "State Contract", number: "", desc: "Standard Configurations. Non-standard Dell Branded HW & Software DOL. APEX Restricted. Expires 2079-01-01" },
-                { name: "Nova Southeastern University, Florida -  Master Commercial Customer Agreement", entity: "State Contract", number: "17AHA", desc: "Standard Configurations. Dell Branded HW & SW, Third Party included. APEX Restricted Expires 2026-06-30" },
-                { name: "Customer Sales Agreement (dual)", entity: "State Contract", number: "Customer Sales Agree", desc: "CSG, ISG and services contract, no discount obligation. Expires 2079-01-01" },
-                { name: "Memorial Healthcare System Customer Purchase Agreement for Products and Services", entity: "State Contract", number: "", desc: "Fixed price on standard configs. APEX Restricted. Expires 2079-01-01" },
-                { name: "State of Florida HSMV - FRVIS Equipment Refresh", entity: "State Contract", number: "HSMV-0435-19", desc: "Hardware, Software, Services at Fixed Prices, APEX restricted Expires 2026-06-30" },
-                { name: "University of Central Florida Master Agreement", entity: "State Contract", number: "", desc: "Full catalog including CSG, ISG, services and thirtd party products. APEX FOD/DCU are excluded Expires 2079-01-01" },
-                { name: "University of Miami, Florida - Master Agreement", entity: "State Contract", number: "", desc: "DOL pricing on select product categories. APEX FOD/DCU are excluded Expires 2026-06-26" },
-                { name: "TRP Customer Sales Agreement", entity: "State Contract", number: "RFP No. 21-2202-02 T", desc: "Full catalog contract, including CSG (excluding consumer products), ISG, Services and Software and subscription (APEX/FOD/DCU). This contract offers fixed pricing for standard configurations and discount off list for non-standard configs. Expires 2026-06-06" },
-                { name: "Dell NASPO Computer Equipment PA - Florida", entity: "State Contract", number: "23026 / 43210000-23-", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" }
-
+                { name: "University of Florida Volume Purchase Agreement", entity: "University of Florida", number: "", expires: "01-01-2079", desc: "Full catalog including CSG, ISG, services and thirtd party products. APEX FOD/DCU are excluded" },
+                { name: "Broward County, Florida - Hardware and Maintenance Agreement", entity: "Broward County, Florida", number: "RFP R1247310P1 / R12", expires: "12-30-2026", desc: "Standard Configs with DOLs listed in first amendment. Dell Branded HW, SW & Services. APEX Restricted." },
+                { name: "University of South Florida Purchase Agreement", entity: "University of South Florida", number: "", expires: "01-01-2079", desc: "Standard Configurations. Non-standard Dell Branded HW & Software DOL. APEX Restricted." },
+                { name: "Nova Southeastern University, Florida -  Master Commercial Customer Agreement", entity: "Nova Southeastern University, FL", number: "17AHA", expires: "06-30-2026", desc: "Standard Configurations. Dell Branded HW & SW, Third Party included. APEX Restricted" },
+                { name: "Customer Sales Agreement (dual)", entity: "Sarasota Memorial Health Care System", number: "Customer Sales Agree", expires: "01-01-2079", desc: "CSG, ISG and services contract, no discount obligation." },
+                { name: "Memorial Healthcare System Customer Purchase Agreement for Products and Services", entity: "Memorial Healthcare System a.k.a. South Broward Ho", number: "", expires: "01-01-2079", desc: "Fixed price on standard configs. APEX Restricted." },
+                { name: "State of Florida HSMV - FRVIS Equipment Refresh", entity: "State of Florida, Department of Highway Safety and", number: "HSMV-0435-19", expires: "06-30-2026", desc: "Hardware, Software, Services at Fixed Prices, APEX restricted" },
+                { name: "University of Central Florida Master Agreement", entity: "University of Central Florida", number: "", expires: "01-01-2079", desc: "Full catalog including CSG, ISG, services and thirtd party products. APEX FOD/DCU are excluded" },
+                { name: "University of Miami, Florida - Master Agreement", entity: "University of Miami, Florida", number: "", expires: "06-26-2026", desc: "DOL pricing on select product categories. APEX FOD/DCU are excluded" },
+                { name: "TRP Customer Sales Agreement", entity: "District Board of Trustees of Seminole State Colle", number: "RFP No. 21-2202-02 T", expires: "06-06-2026", desc: "Full catalog contract, including CSG (excluding consumer products), ISG, Services and Software and subscription (APEX/FOD/DCU). This contract offers fixed pricing for standard configurations and discount off list for non-standard configs." },
+                { name: "Dell NASPO Computer Equipment PA - Florida", entity: "State of Florida", number: "23026 / 43210000-23-", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
             ],
             "GA": [
-                { name: "Emory University Purchase Agreement", entity: "State Contract", number: "", desc: "Emory University Purchase Agreement Expires 2026-09-17" },
-                { name: "MISBO - Volume Purchase Agreement", entity: "State Contract", number: "", desc: "DOL pricing on CSG and ISG  products, APEX FOD/DCU are excluded Expires 2079-01-01" },
-                { name: "Georgia Software Contract", entity: "State Contract", number: "SPD-SPD0000060-0006", desc: "GA Software Contract - DOL on select software - Apex and hardware is restricted. Expires 2026-04-30" },
-                { name: "Georgia Enterprise Infrastructure", entity: "State Contract", number: "99999-001-SPD0000139", desc: "Georgia Enterprise Infrastructure -fixed discount on standard enterprise configuration Expires 2026-11-08" },
-                { name: "Georgia End User Computing Agreement", entity: "State Contract", number: "99999-SPD0000161-000", desc: "End-User Computing 99999-SPD0000161-0004 - DOL discounts on hardware, APEX and printers are restricted. Expires 2026-06-02" },
-                { name: "Contract No. 167-21, K-12 Student Learning Devices and Support Services", entity: "State Contract", number: "RFP 167-21", desc: "Standard Configurations with fixed prices. Laptops, Charging Carts, Implementation Services, and Training. Expires 2026-06-30" },
-                { name: "Dell NASPO Computer Equipment PA - Cobb County School District, GA", entity: "State Contract", number: "23026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" }
+                { name: "Emory University Purchase Agreement", entity: "Emory University", number: "", expires: "09-17-2026", desc: "Emory University Purchase Agreement" },
+                { name: "MISBO - Volume Purchase Agreement", entity: "Mid-South Independent Business School Officers (MI", number: "", expires: "01-01-2079", desc: "DOL pricing on CSG and ISG  products, APEX FOD/DCU are excluded" },
+                { name: "Georgia Software Contract", entity: "State of Georgia", number: "SPD-SPD0000060-0006", expires: "04-30-2026", desc: "GA Software Contract - DOL on select software - Apex and hardware is restricted." },
+                { name: "Georgia Enterprise Infrastructure", entity: "State of Georgia Dept. of Administration Services", number: "99999-001-SPD0000139", expires: "11-08-2026", desc: "Georgia Enterprise Infrastructure -fixed discount on standard enterprise configuration" },
+                { name: "Georgia End User Computing Agreement", entity: "Georgia Department of Administrative Services", number: "99999-SPD0000161-000", expires: "06-02-2026", desc: "End-User Computing 99999-SPD0000161-0004 - DOL discounts on hardware, APEX and printers are restricted." },
+                { name: "Contract No. 167-21, K-12 Student Learning Devices and Support Services", entity: "Fulton County School District, GA", number: "RFP 167-21", expires: "06-30-2026", desc: "Standard Configurations with fixed prices. Laptops, Charging Carts, Implementation Services, and Training." },
+                { name: "Dell NASPO Computer Equipment PA - Cobb County School District, GA", entity: "Cobb County School District, Georgia", number: "23026", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
             ],
             "HI": [
-                { name: "Dell NASPO Cloud Solutions PA - Hawaii", entity: "State Contract", number: "AR2495 / 17-18", desc: "NASPO Cloud Solutions Expires 2026-09-15" },
-                { name: "NASPO SVAR - Hawaii PA", entity: "State Contract", number: "CTR060024 / 23-08", desc: "Standalone third party software Dell as a reseller contract.. APEX FOD/DCU, Dell Branded HW & SW restricted. Expires 2027-04-24" },
-                { name: "Dell NASPO Computer Equipment PA - Hawaii", entity: "State Contract", number: "23026 / 24-03", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" },
-                { name: "RCUH Master Customer Sales Agreement", entity: "State Contract", number: "", desc: "Full catalog including APEX and Third Party Expires 2079-01-01" }
-
+                { name: "Dell NASPO Cloud Solutions PA - Hawaii", entity: "State of Hawaii", number: "AR2495 / 17-18", expires: "09-15-2026", desc: "NASPO Cloud Solutions" },
+                { name: "NASPO SVAR - Hawaii PA", entity: "State of Hawaii", number: "CTR060024 / 23-08", expires: "04-24-2027", desc: "Standalone third party software Dell as a reseller contract.. APEX FOD/DCU, Dell Branded HW & SW restricted." },
+                { name: "Dell NASPO Computer Equipment PA - Hawaii", entity: "State of Hawaii", number: "23026 / 24-03", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
+                { name: "RCUH Master Customer Sales Agreement", entity: "Research Corporation of the University of Hawaii", number: "", expires: "01-01-2079", desc: "Full catalog including APEX and Third Party" },
             ],
             "ID": [
-                { name: "NASPO SVAR - Idaho PA", entity: "State Contract", number: "CTR060024 / PADD2024", desc: "Standalone third party software Dell as a reseller contract. General category only, Microsoft Excluded. APEX FOD/DCU, Dell Branded HW & SW restricted. Expires 2027-04-24" },
-                { name: "Dell NASPO Computer Equipment PA - Idaho", entity: "State Contract", number: "23026 / PADD20245022", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" }
-
+                { name: "NASPO SVAR - Idaho PA", entity: "State of Idaho", number: "CTR060024 / PADD2024", expires: "04-24-2027", desc: "Standalone third party software Dell as a reseller contract. General category only, Microsoft Excluded. APEX FOD/DCU, Dell Branded HW & SW restricted." },
+                { name: "Dell NASPO Computer Equipment PA - Idaho", entity: "State of Idaho", number: "23026 / PADD20245022", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
             ],
             "IL": [
-                { name: "Northwestern University, IL - PRSCONT2014-002D Client", entity: "State Contract", number: "PRSCONT2014-002D", desc: "Desktop, Laptop and Tablet Computers, related accessories, Monitors and Servers. APEX Restricted. Expires 2026-12-31" },
-                { name: "Edward Health Services Corporation Master Commercial Customer Agreement", entity: "State Contract", number: "MCAA013113", desc: "MCAA013113 - Fixed pricing on standard configurations Expires 2079-01-01" },
-                { name: "Dell Purchase Agreement - IL", entity: "State Contract", number: "51904", desc: "Fixed price on standard configurations, DOL pricing for the rest of the Dell catalog, APEX FOD/DCU are excluded Expires 2026-12-29" },
-                { name: "Customer Purchase Agreement For Products and Services", entity: "State Contract", number: "", desc: "Full Dell Catalog - Fixed price on specified configurations and DOL on non -standard products, Apex restricted. Expires 2079-01-01" },
-                { name: "Dell Campus Agreement - IL", entity: "State Contract", number: "99001499", desc: "Full Dell Catalog, APEX FOD/DCU are excluded Expires 2079-01-01" },
-                { name: "Illinois PHEC - Software and related Services", entity: "State Contract", number: "RFP #RM071017", desc: "SW & SW Services. APEX FOD/DCU Restricted. Expires 2027-06-30" },
-                { name: "Illinois State University Rebate Program Agreement", entity: "State Contract", number: "MHEC-04152022", desc: "Illinois State University piggyback to Midwestern Higher Education Commission MHEC-04152022 Contract Expires 2026-06-30" },
-                { name: "Office of the Illinois State Treasure Master Agreementr", entity: "State Contract", number: "", desc: "Dell and EMC Full Catalog - APEX Included. Expires 2027-05-09" },
-                { name: "Office of the Attorney General State of Illinois Contract", entity: "State Contract", number: "", desc: "Full Dell/EMC Catalog, Third Party, APEX FOD/DCU is not allowed Expires 2028-06-30" },
-                { name: "Rebate Program Agreement for Southern Illinois University", entity: "State Contract", number: "MHEC-04152022", desc: "MHEC Purchase and Rebate Agreement for Southern Illinois University Expires 2026-06-30" }
-
+                { name: "Northwestern University, IL - PRSCONT2014-002D Client", entity: "Northwestern University, Evanston, IL", number: "PRSCONT2014-002D", expires: "12-31-2026", desc: "Desktop, Laptop and Tablet Computers, related accessories, Monitors and Servers. APEX Restricted." },
+                { name: "Edward Health Services Corporation Master Commercial Customer Agreement", entity: "Edward Health Services Corporation", number: "MCAA013113", expires: "01-01-2079", desc: "MCAA013113 - Fixed pricing on standard configurations" },
+                { name: "Dell Purchase Agreement - IL", entity: "City of Chicago, IL", number: "51904", expires: "12-29-2026", desc: "Fixed price on standard configurations, DOL pricing for the rest of the Dell catalog, APEX FOD/DCU are excluded" },
+                { name: "Customer Purchase Agreement For Products and Services", entity: "University of Chicago, IL", number: "", expires: "01-01-2079", desc: "Full Dell Catalog - Fixed price on specified configurations and DOL on non -standard products, Apex restricted." },
+                { name: "Dell Campus Agreement - IL", entity: "University of Chicago, IL", number: "99001499", expires: "01-01-2079", desc: "Full Dell Catalog, APEX FOD/DCU are excluded" },
+                { name: "Illinois PHEC - Software and related Services", entity: "Illinois Public Higher Ed Cooperative (IPHEC)", number: "RFP #RM071017", expires: "06-30-2027", desc: "SW & SW Services. APEX FOD/DCU Restricted." },
+                { name: "Illinois State University Rebate Program Agreement", entity: "Illinois State University", number: "MHEC-04152022", expires: "06-30-2026", desc: "Illinois State University piggyback to Midwestern Higher Education Commission MHEC-04152022 Contract" },
+                { name: "Office of the Illinois State Treasure Master Agreementr", entity: "Office of the Illinois State Treasurer", number: "", expires: "05-09-2027", desc: "Dell and EMC Full Catalog - APEX Included." },
+                { name: "Office of the Attorney General State of Illinois Contract", entity: "State of Illinois, Office of the Attorney General", number: "", expires: "06-30-2028", desc: "Full Dell/EMC Catalog, Third Party, APEX FOD/DCU is not allowed" },
+                { name: "Rebate Program Agreement for Southern Illinois University", entity: "Board of Trustees of the Southern Illinois Univers", number: "MHEC-04152022", expires: "06-30-2026", desc: "MHEC Purchase and Rebate Agreement for Southern Illinois University" },
             ],
             "IN": [
-                { name: "Purdue University Service Level Agreement for Computer Equipment Purchases", entity: "State Contract", number: "98000405", desc: "Service Level Agreement - Fixed price on listed configurations and DOL discounts on non listed - APEX restricted. Expires 2026-09-30" },
-                { name: "Indiana University Volume Purchase Agreement", entity: "State Contract", number: "9913756", desc: "VPA - Fixed prices on specified configurations, DOL discount on the remaining catalog - Apex restricted Expires 2027-03-31" },
-                { name: "Customer Purchase Agreement- Ivy Tech Community College of Indiana", entity: "State Contract", number: "", desc: "Standard Configurations with fixed pricing. APEX Restricted. Expires 2026-09-07" },
-                { name: "Dell NASPO Computer Equipment PA - Indianapolis Airport Authority", entity: "State Contract", number: "23026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" },
-                { name: "Dell NASPO Computer Equipment PA - Indiana", entity: "State Contract", number: "23026 / 87795", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" }
-
+                { name: "Purdue University Service Level Agreement for Computer Equipment Purchases", entity: "Purdue University, West Lafayette, Indiana", number: "98000405", expires: "09-30-2026", desc: "Service Level Agreement - Fixed price on listed configurations and DOL discounts on non listed - APEX restricted." },
+                { name: "Indiana University Volume Purchase Agreement", entity: "Indiana University, Bloomington", number: "9913756", expires: "03-31-2027", desc: "VPA - Fixed prices on specified configurations, DOL discount on the remaining catalog - Apex restricted" },
+                { name: "Customer Purchase Agreement- Ivy Tech Community College of Indiana", entity: "Ivy Tech Community College of Indiana", number: "", expires: "09-07-2026", desc: "Standard Configurations with fixed pricing. APEX Restricted." },
+                { name: "Dell NASPO Computer Equipment PA - Indianapolis Airport Authority", entity: "Indianapolis Airport Authority", number: "23026", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
+                { name: "Dell NASPO Computer Equipment PA - Indiana", entity: "State of Indiana", number: "23026 / 87795", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
             ],
             "IA": [
-                { name: "Dell Campus Agreement - IA", entity: "State Contract", number: "99000725", desc: "Premier page agreement for the full Dell Catalog - APEX FOD/DCU are excluded Expires 2079-01-01" },
-                { name: "University of Iowa Purchase Agreement (IBOR)", entity: "State Contract", number: "00000003000000000000", desc: "Fixed pricing on specified configs and DOL discount for remaining CSG catalog - Apex restricted Expires 2026-05-05" },
-                { name: "Dell NASPO Computer Equipment PA - Iowa", entity: "State Contract", number: "23026 / 2024-B012", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" }
-
+                { name: "Dell Campus Agreement - IA", entity: "Iowa State University", number: "99000725", expires: "01-01-2079", desc: "Premier page agreement for the full Dell Catalog - APEX FOD/DCU are excluded" },
+                { name: "University of Iowa Purchase Agreement (IBOR)", entity: "University of Iowa", number: "00000003000000000000", expires: "05-05-2026", desc: "Fixed pricing on specified configs and DOL discount for remaining CSG catalog - Apex restricted" },
+                { name: "Dell NASPO Computer Equipment PA - Iowa", entity: "State of Iowa", number: "23026 / 2024-BUS-012", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
             ],
             "KS": [
-                { name: "NASPO SVAR - Kansas PA", entity: "State Contract", number: "CTR060024 / 53177", desc: "Standalone third party software Dell as a reseller contract.. APEX FOD/DCU, Dell Branded HW & SW restricted. Expires 2027-04-24" },
-                { name: "Dell NASPO Computer Equipment PA - Kansas", entity: "State Contract", number: "23026 / 55221", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" }
-
+                { name: "NASPO SVAR - Kansas PA", entity: "State of Kansas", number: "CTR060024 / 53177", expires: "04-24-2027", desc: "Standalone third party software Dell as a reseller contract.. APEX FOD/DCU, Dell Branded HW & SW restricted." },
+                { name: "Dell NASPO Computer Equipment PA - Kansas", entity: "State of Kansas", number: "23026 / 55221", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
             ],
             "KY": [
-                { name: "Desktops, Laptops, and Associated Services", entity: "State Contract", number: "UK-1400-15", desc: "DoL discount on Desktops, Laptops, and Associated Services-Apex restriced Expires 2026-10-31" },
-                { name: "Dell Volume Purchase - Kentucky", entity: "State Contract", number: "", desc: "Full catalog including CSG, ISG, services and thirtd party products. APEX FOD/DCU are excluded Expires 2079-01-01" },
-                { name: "KETS Enterprise Server Storage Hardware Services", entity: "State Contract", number: "MA 7582000000720", desc: "Server, storage products and associated services.  NO THIRD PARTY PRODUCTS ALLOWED Expires 2026-09-07" },
-                { name: "KETS Instructional Devices", entity: "State Contract", number: "MA 758 2100000423", desc: "Enterprise Desktops, Laptons, Tablets, Monitors, accessories and Services. NO THIRD PARTY PRODUCTS ALLOWED Expires 2026-09-30" },
-                { name: "Attachment A Contract for KETS Network Products and Services", entity: "State Contract", number: "MA 758 2100000652", desc: "DOL on Dell Networking and OEM Networking. Apex Restricted. Expires 2027-06-30" },
-                { name: "University of Louisville, Kentucky - Personal Computers", entity: "State Contract", number: "RP-022-21-B", desc: "RP-022-21-B  Fixed prices on specific software licenses- all other products are restricted Expires 2026-05-19" },
-                { name: "Notice of Award of Price Contract", entity: "State Contract", number: "UK-2190-22", desc: "Microsoft Resell Agreement Expires 2027-09-30" },
-                { name: "Dell NASPO Computer Equipment PA - Kentucky", entity: "State Contract", number: "23026 / MA 758 24000", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" }
-
+                { name: "Desktops, Laptops, and Associated Services", entity: "University of Kentucky", number: "UK-1400-15", expires: "10-31-2026", desc: "DoL discount on Desktops, Laptops, and Associated Services-Apex restriced" },
+                { name: "Dell Volume Purchase - Kentucky", entity: "Association of Independent Kentucky Colleges and U", number: "", expires: "01-01-2079", desc: "Full catalog including CSG, ISG, services and thirtd party products. APEX FOD/DCU are excluded" },
+                { name: "KETS Enterprise Server Storage Hardware Services", entity: "Commonwealth of Kentucky, Kentucky Department of E", number: "MA 7582000000720", expires: "09-07-2026", desc: "Server, storage products and associated services.  NO THIRD PARTY PRODUCTS ALLOWED" },
+                { name: "KETS Instructional Devices", entity: "Commonwealth of Kentucky, Kentucky Department of E", number: "MA 758 2100000423", expires: "09-30-2026", desc: "Enterprise Desktops, Laptons, Tablets, Monitors, accessories and Services. NO THIRD PARTY PRODUCTS ALLOWED" },
+                { name: "Attachment A Contract for KETS Network Products and Services", entity: "Commonwealth of Kentucky", number: "MA 758 2100000652", expires: "06-30-2027", desc: "DOL on Dell Networking and OEM Networking. Apex Restricted." },
+                { name: "University of Louisville, Kentucky - Personal Computers", entity: "University of Louisville, Kentucky", number: "RP-022-21-B", expires: "05-19-2026", desc: "RP-022-21-B  Fixed prices on specific software licenses- all other products are restricted" },
+                { name: "Notice of Award of Price Contract", entity: "University of Kentucky", number: "UK-2190-22", expires: "09-30-2027", desc: "Microsoft Resell Agreement" },
+                { name: "Dell NASPO Computer Equipment PA - Kentucky", entity: "State of Kentucky", number: "23026 / MA 758 24000", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
             ],
             "LA": [
-                { name: "Tulane University Volume Purchase Agreement - Louisiana", entity: "State Contract", number: "LA-Volume Purchase A", desc: "DOL pricing on CSG products, APEX FOD is excluded. Expires 2079-01-01" },
-                { name: "State of Louisiana, MS Enterprise 01E73758", entity: "State Contract", number: "LA-01E73758", desc: "Microsoft Resell Agreement. APEX,Dell Branded HW & SW restricted. Expires 2026-08-31" },
-                { name: "Palo Alto NASPO LA Contract 4400019503", entity: "State Contract", number: "LA Contract 44000195", desc: "Palo Alto Products only - follows Palo Alto NASPO pricing, see the pricelist Expires 2026-09-30" },
-                { name: "Louisiana State University - MHEC Rebate Piggyback Agreement", entity: "State Contract", number: "MHEC-04152022", desc: "Louisiana State University piggyback to Midwestern Higher Education Commission MHEC-04152022 Contract Expires 2029-06-30" },
-                { name: "NASPO SVAR - Louisiana PA", entity: "State Contract", number: "CTR060024 / 44000267", desc: "Standalone third party software Dell as a reseller contract.. APEX FOD/DCU, Dell Branded HW & SW restricted. Expires 2027-04-24" },
-                { name: "Dell NASPO Computer Equipment PA - Louisiana", entity: "State Contract", number: "23026 / 4400028252", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" }
-
+                { name: "Tulane University Volume Purchase Agreement - Louisiana", entity: "Tulane University, Louisiana", number: "LA-Volume Purchase A", expires: "01-01-2079", desc: "DOL pricing on CSG products, APEX FOD is excluded." },
+                { name: "State of Louisiana, MS Enterprise 01E73758", entity: "State of Louisiana", number: "LA-01E73758", expires: "08-31-2026", desc: "Microsoft Resell Agreement. APEX,Dell Branded HW & SW restricted." },
+                { name: "Palo Alto NASPO LA Contract 4400019503", entity: "Palo Alto Networks, Inc.", number: "LA Contract 44000195", expires: "09-30-2026", desc: "Palo Alto Products only - follows Palo Alto NASPO pricing, see the pricelist" },
+                { name: "Louisiana State University - MHEC Rebate Piggyback Agreement", entity: "Louisiana State University", number: "MHEC-04152022", expires: "06-30-2029", desc: "Louisiana State University piggyback to Midwestern Higher Education Commission MHEC-04152022 Contract" },
+                { name: "NASPO SVAR - Louisiana PA", entity: "State of Louisiana", number: "CTR060024 / 44000267", expires: "04-24-2027", desc: "Standalone third party software Dell as a reseller contract.. APEX FOD/DCU, Dell Branded HW & SW restricted." },
+                { name: "Dell NASPO Computer Equipment PA - Louisiana", entity: "State of Louisiana", number: "23026 / 4400028252", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
             ],
             "ME": [
-                { name: "Maine University VPA - ME", entity: "State Contract", number: "", desc: "Fixed pricing on standard configurations. APEX FOD/DCU are excluded Expires 2079-01-01" },
-                { name: "University of Maine System Master Agreement", entity: "State Contract", number: "", desc: "Master Agreement - Fixed prices on standard configurations on CSG products. APEX restricted. Expires 2028-12-09" },
-                { name: "State of Maine ITS 75", entity: "State Contract", number: "ITS75 Software", desc: "ITS75 Software Expires 2026-06-30" },
-                { name: "Dell NASPO Computer Equipment PA - Maine", entity: "State Contract", number: "23026 / MA 18P 23090", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" }
-
+                { name: "Maine University VPA - ME", entity: "University of Maine", number: "", expires: "01-01-2079", desc: "Fixed pricing on standard configurations. APEX FOD/DCU are excluded" },
+                { name: "University of Maine System Master Agreement", entity: "University of Maine System", number: "", expires: "12-09-2028", desc: "Master Agreement - Fixed prices on standard configurations on CSG products. APEX restricted." },
+                { name: "State of Maine ITS 75", entity: "State of Maine", number: "ITS75 Software", expires: "06-30-2026", desc: "ITS75 Software" },
+                { name: "Dell NASPO Computer Equipment PA - Maine", entity: "State of Maine", number: "23026 / MA 18P 23090", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
             ],
             "MD": [
-                { name: "State of Maryland Department of Information Technology Hardware Contract", entity: "State Contract", number: "060B2490022", desc: "Dell Branded HW and Services, CSG & APEX Restricted Expires 2027-12-07" },
-                { name: "State of Maryland DoIT - IT Consulting and Tech Services", entity: "State Contract", number: "060B2490023-2016", desc: "Tied and non-tied services. APEX Restricted. Expires 2028-04-21" },
-                { name: "Commercial Off-the-Shelf Software (COTS) Contract", entity: "State Contract", number: "060B2490021", desc: "Commercial Off The Shelf Software. APEX Restricted. Expires 2027-09-30" },
-                { name: "MEEC IT Hardware Contract", entity: "State Contract", number: "UMD-972016", desc: "MEEC IT Hardware Contract - DOL discounts on all categories except cloud services - Boomi, Pivotal, Virtustream, RSA and APEX are restricted Expires 2026-03-14" },
-                { name: "Maryland Education Enterprise Consortium IT Security Services and Solutions", entity: "State Contract", number: "PGCC-20-10", desc: "Fixed price on contracted services - Hardware, software is restricted. Expires 2027-06-30" },
-                { name: "Dell NASPO Computer Equipment PA - Anne Arundel County, MD", entity: "State Contract", number: "23026 / PGB2400107", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" },
-                { name: "Johns Hopkins University", entity: "State Contract", number: "", desc: "Full catalog contract, including subscription. No pricing obligations. Expires 2079-01-01" }
-
+                { name: "State of Maryland Department of Information Technology Hardware Contract", entity: "State of Maryland Department of Information Techno", number: "060B2490022", expires: "12-07-2027", desc: "Dell Branded HW and Services, CSG & APEX Restricted" },
+                { name: "State of Maryland DoIT - IT Consulting and Tech Services", entity: "State of Maryland, Department of Information Techn", number: "060B2490023-2016", expires: "04-21-2028", desc: "Tied and non-tied services. APEX Restricted." },
+                { name: "Commercial Off-the-Shelf Software (COTS) Contract", entity: "State of Maryland Department of Information Techno", number: "060B2490021", expires: "09-30-2027", desc: "Commercial Off The Shelf Software. APEX Restricted." },
+                { name: "MEEC IT Hardware Contract", entity: "University Systems of Maryland, a/k/a MEEC", number: "UMD-972016", expires: "03-14-2026", desc: "MEEC IT Hardware Contract - DOL discounts on all categories except cloud services - Boomi, Pivotal, Virtustream, RSA and APEX are restricted" },
+                { name: "Maryland Education Enterprise Consortium IT Security Services and Solutions", entity: "Maryland Education Enterprise Consortium (MEEC)", number: "PGCC-20-10", expires: "06-30-2027", desc: "Fixed price on contracted services - Hardware, software is restricted." },
+                { name: "Dell NASPO Computer Equipment PA - Anne Arundel County, MD", entity: "Anne Arundel County, MD", number: "23026 / PGB2400107", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
+                { name: "Johns Hopkins University", entity: "Johns Hopkins University", number: "", expires: "01-01-2079", desc: "Full catalog contract, including subscription. No pricing obligations." },
             ],
             "MA": [
-                { name: "Northeastern Univ VPA - MA", entity: "State Contract", number: "Northeastern VPA  -", desc: "Volume Purchase Agreement - DOL discounts on specified categories - APEX restricted Expires 2079-01-01" },
-                { name: "Boston University Purchase Agreement", entity: "State Contract", number: "", desc: "Fixed price on standard configurations. APEX FOD/DCU are excluded Expires 2079-01-01" },
-                { name: "Commonwealth of Massachusetts ITS58 Software", entity: "State Contract", number: "ITS58 Software", desc: "ITS58 Software Reseller Agreement - Software only Contract Expires 2026-06-30" },
-                { name: "Brandeis University Purchase Agreement - Massachusetts", entity: "State Contract", number: "", desc: "MCCA Fixed pricing on specified configs, DOL discount on non listed client products. Apex Restricted. Expires 2079-01-01" },
-                { name: "Trustees of Boston College Purchase Agreement - MA", entity: "State Contract", number: "", desc: "Purchase Agreement for standard configuration desktops and laptops - APEX restricted Expires 2028-08-31" },
-                { name: "UMASS Master Agreement", entity: "State Contract", number: "", desc: "UMASS Master Agreement - DOL for Dell and Dell EMC branded Products.APEX restricted Expires 2026-05-31" },
-                { name: "Commonwealth of Massachusetts - ITC73 EMC", entity: "State Contract", number: "ITC73-EMC", desc: "EMC Massachusetts State Hardware Contract. OEM Storage Solutions and Servers. Expires 2028-01-30" },
-                { name: "Commonwealth of Massachusetts ITC73", entity: "State Contract", number: "ITC73-Dell", desc: "ITC73 -Standard configurations with DOL discounts - multiple restrictions including APEX Expires 2028-01-30" },
-                { name: "Commonwealth of Massachusetts ITS75 Software", entity: "State Contract", number: "ITS75 Software", desc: "ITS75 Software contract for specified applications. Expires 2026-06-30" },
-                { name: "Dell Massachusetts Higher Education Consortium (MHEC)", entity: "State Contract", number: "MC13-F05", desc: "MC13-F05 Expires 2026-09-30" },
-                { name: "EMC Master Ordering Agreement for Northeastern University", entity: "State Contract", number: "", desc: "Services contract from EMC, no obligation to discount, Csg is restricted. Expires 2079-01-01" },
-                { name: "Trustees of Tufts College", entity: "State Contract", number: "", desc: "Tufts College Master Agreement -Full catalog, excluding APEX. Standard Configs and DOL for non-standards Expires 2028-09-19" },
-                { name: "Massachusetts Institute of Technology (MIT)", entity: "State Contract", number: "", desc: "Purchase Agreement for CSG, ISG, Support Services, Professional Services (excludes storage arrays and standalone software), and Third Party Offerings.  APEX and Subscriptions are not in scope under this Agreement. Expires 2028-03-31" },
-                { name: "Harvard University, MA Master Agreement", entity: "State Contract", number: "", desc: "Purchase Agreement for CSG, ISG, tied services, professional services and third party (Subscriptions/FOD/DCU are not in scope) for Harvard University. Expires 2028-04-01" }
-
+                { name: "Northeastern Univ VPA - MA", entity: "Northeastern University, MA", number: "Northeastern VPA  -", expires: "01-01-2079", desc: "Volume Purchase Agreement - DOL discounts on specified categories - APEX restricted" },
+                { name: "Boston University Purchase Agreement", entity: "Boston University, MA", number: "", expires: "01-01-2079", desc: "Fixed price on standard configurations. APEX FOD/DCU are excluded" },
+                { name: "Commonwealth of Massachusetts ITS58 Software", entity: "Commonwealth of Massachusetts", number: "ITS58 Software", expires: "06-30-2026", desc: "ITS58 Software Reseller Agreement - Software only Contract" },
+                { name: "Brandeis University Purchase Agreement - Massachusetts", entity: "Brandeis University, Massachusetts", number: "", expires: "01-01-2079", desc: "MCCA Fixed pricing on specified configs, DOL discount on non listed client products. Apex Restricted." },
+                { name: "Trustees of Boston College Purchase Agreement - MA", entity: "Trustees of Boston College", number: "", expires: "08-31-2028", desc: "Purchase Agreement for standard configuration desktops and laptops - APEX restricted" },
+                { name: "UMASS Master Agreement", entity: "University of Massachusetts", number: "", expires: "05-31-2026", desc: "UMASS Master Agreement - DOL for Dell and Dell EMC branded Products.APEX restricted" },
+                { name: "Commonwealth of Massachusetts - ITC73 EMC", entity: "Commonwealth of Massachusetts", number: "ITC73-EMC", expires: "01-30-2028", desc: "EMC Massachusetts State Hardware Contract. OEM Storage Solutions and Servers." },
+                { name: "Commonwealth of Massachusetts ITC73", entity: "Commonwealth of Massachusetts", number: "ITC73-Dell", expires: "01-30-2028", desc: "ITC73 -Standard configurations with DOL discounts - multiple restrictions including APEX" },
+                { name: "Commonwealth of Massachusetts ITS75 Software", entity: "Commonwealth of Massachusetts", number: "ITS75 Software", expires: "06-30-2026", desc: "ITS75 Software contract for specified applications." },
+                { name: "Dell Massachusetts Higher Education Consortium (MHEC)", entity: "Massachusetts Higher Education Consortium, MA (MHE", number: "MC13-F05", expires: "09-30-2026", desc: "MC13-F05" },
+                { name: "EMC Master Ordering Agreement for Northeastern University", entity: "Northeastern University", number: "", expires: "01-01-2079", desc: "Services contract from EMC, no obligation to discount, Csg is restricted." },
+                { name: "Trustees of Tufts College", entity: "Trustees of Tufts College", number: "", expires: "09-19-2028", desc: "Tufts College Master Agreement -Full catalog, excluding APEX. Standard Configs and DOL for non-standards" },
+                { name: "Massachusetts Institute of Technology (MIT)", entity: "Massachusetts Institute of Technology (MIT)", number: "", expires: "03-31-2028", desc: "Purchase Agreement for CSG, ISG, Support Services, Professional Services (excludes storage arrays and standalone software), and Third Party Offerings.  APEX and Subscriptions are not in scope under this Agreement." },
+                { name: "Harvard University, MA Master Agreement", entity: "Harvard University, MA", number: "", expires: "04-01-2028", desc: "Purchase Agreement for CSG, ISG, tied services, professional services and third party (Subscriptions/FOD/DCU are not in scope) for Harvard University." },
             ],
             "MI": [
-                { name: "State of Michigan MiDeals Agreement", entity: "State Contract", number: "071B6600111", desc: "DOL discounts on full catalog - Apex restricted Expires 2026-07-31" },
-                { name: "Dell Strategic Alliance and Rebate Agreement", entity: "State Contract", number: "", desc: "Dell Strategic Alliance and Rebate Agreement - DOL on CSG and ISG - Apex Restricted Expires 2079-01-01" },
-                { name: "Michigan Enterprise 071B7700099", entity: "State Contract", number: "071B7700099", desc: "EMC Enterprise Contract available to members of Michigan MiDEAL Program. MiDEAL Members. MiDeal members include local units of government, school districts, universities, community colleges, and non-profit orgs.  Specific hardware, software, maintenance and services are noted in Schedule A, Exhibit 2. Expires 2027-01-25" },
-                { name: "University of Michigan Ann Arbor Contract - Tech Shop", entity: "State Contract", number: "", desc: "Fixed prices on standard configurations and services Expires 2026-02-13" },
-                { name: "University of Michigan Ann Arbor Contract", entity: "State Contract", number: "", desc: "University of Michigan Ann Arbor Contract - Fixed pricing on specified hardware configurations -Storage and Apex is restricted Expires 2026-02-13" },
-                { name: "Wayne State University Standard Strategic Source Agreement", entity: "State Contract", number: "", desc: "Master Agreement for Dell's Catalog - Standard Configs for Dell-branded client systems, peripheral, and close to the box services Expires 2026-09-30" },
-                { name: "County of Wayne MS Enterprise Agreement", entity: "State Contract", number: "2025-013", desc: "Microsoft Enterprise Agreement - MS software only Expires 2028-04-20" }
-
+                { name: "State of Michigan MiDeals Agreement", entity: "State of Michigan", number: "071B6600111", expires: "07-31-2026", desc: "DOL discounts on full catalog - Apex restricted" },
+                { name: "Dell Strategic Alliance and Rebate Agreement", entity: "Michigan State University", number: "", expires: "01-01-2079", desc: "Dell Strategic Alliance and Rebate Agreement - DOL on CSG and ISG - Apex Restricted" },
+                { name: "Michigan Enterprise 071B7700099", entity: "State of Michigan Enterprise Procurement", number: "071B7700099", expires: "01-25-2027", desc: "EMC Enterprise Contract available to members of Michigan MiDEAL Program. MiDEAL Members. MiDeal members include local units of government, school districts, universities, community colleges, and non-profit orgs.  Specific hardware, software, maintenance and services are noted in Schedule A, Exhibit 2." },
+                { name: "University of Michigan Ann Arbor Contract - Tech Shop", entity: "University of Michigan Ann Arbor", number: "", expires: "02-13-2026", desc: "Fixed prices on standard configurations and services" },
+                { name: "University of Michigan Ann Arbor Contract", entity: "University of Michigan Ann Arbor", number: "", expires: "02-13-2026", desc: "University of Michigan Ann Arbor Contract - Fixed pricing on specified hardware configurations -Storage and Apex is restricted" },
+                { name: "Wayne State University Standard Strategic Source Agreement", entity: "Wayne State University", number: "", expires: "09-30-2026", desc: "Master Agreement for Dell's Catalog - Standard Configs for Dell-branded client systems, peripheral, and close to the box services" },
+                { name: "County of Wayne MS Enterprise Agreement", entity: "County of Wayne, MI", number: "2025-013", expires: "04-20-2028", desc: "Microsoft Enterprise Agreement - MS software only" },
             ],
             "MN": [
-                { name: "United HealthCare Services, Inc. Purchase Agreement", entity: "State Contract", number: "", desc: "Standard configurations and DOL discount on desktops and laptops only. Expires 2079-01-01" },
-                { name: "Minnesota State University, Mankato - Microcenter Store Agreement", entity: "State Contract", number: "99000744", desc: "042099 MS - Premiere page rebate agreement, full catalog - Apex restricted Expires 2079-01-01" },
-                { name: "University of Minnesota Contract U250.2", entity: "State Contract", number: "MHEC-04152022 / U250", desc: "University of Minnesota Contract U250.2 - MHEC Piggyback Expires 2026-12-31" },
-                { name: "NASPO SVAR - Minnesota PA", entity: "State Contract", number: "CTR060024 / 232104", desc: "Standalone third party software Dell as a reseller contract.. APEX FOD/DCU, Dell Branded HW & SW restricted. Expires 2027-07-31" },
-                { name: "Dell NASPO Computer Equipment PA - Minnesota", entity: "State Contract", number: "23026 / 236465", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" }
-
+                { name: "United HealthCare Services, Inc. Purchase Agreement", entity: "United HealthCare Services, Inc.", number: "", expires: "01-01-2079", desc: "Standard configurations and DOL discount on desktops and laptops only." },
+                { name: "Minnesota State University, Mankato - Microcenter Store Agreement", entity: "Minnesota State University, Mankato", number: "99000744", expires: "01-01-2079", desc: "042099 MS - Premiere page rebate agreement, full catalog - Apex restricted" },
+                { name: "University of Minnesota Contract U250.2", entity: "University of Minnesota, Minneapolis", number: "MHEC-04152022 / U250", expires: "12-31-2026", desc: "University of Minnesota Contract U250.2 - MHEC Piggyback" },
+                { name: "NASPO SVAR - Minnesota PA", entity: "State of Minnesota", number: "CTR060024 / 232104", expires: "07-31-2027", desc: "Standalone third party software Dell as a reseller contract.. APEX FOD/DCU, Dell Branded HW & SW restricted." },
+                { name: "Dell NASPO Computer Equipment PA - Minnesota", entity: "State of Minnesota", number: "23026 / 236465", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
             ],
             "MS": [
-                { name: "State of Mississippi Microsoft Unified Support Contract", entity: "State Contract", number: "", desc: "Microsoft Enterprise Agreement - MS software only Expires 2026-03-31" },
-                { name: "State of Mississippi, EPO - 4671", entity: "State Contract", number: "MS-EPO-4671", desc: "Dell full catalog including 3rd party, excluding subscription Expires 2079-01-01" }
-
+                { name: "State of Mississippi Microsoft Unified Support Contract", entity: "State of Mississippi Dept. of Information Technolo", number: "", expires: "03-31-2026", desc: "Microsoft Enterprise Agreement - MS software only" },
+                { name: "State of Mississippi, EPO - 4671", entity: "Mississippi Department of Information Technology S", number: "MS-EPO-4671", expires: "01-01-2079", desc: "Dell full catalog including 3rd party, excluding subscription" },
             ],
             "MO": [
-                { name: "Dell Purchase Agreement - MO", entity: "State Contract", number: "", desc: "Full catalog including CSG, ISG, services and thirtd party products. APEX FOD/DCU are excluded Expires 2079-01-01" },
-                { name: "Ascension Health Purchase Agreement", entity: "State Contract", number: "AHIS-0725", desc: "Enterprise Contract Expires 2027-03-31" },
-                { name: "Washington University, St. Louis, Missouri - Master Agreement", entity: "State Contract", number: "146313855", desc: "Master Agreement - Fixed prices on specified configs and services. DOL discount on CSG and ISG -APEX restricted Expires 2027-04-20" },
-                { name: "NASPO SVAR - Missouri PA", entity: "State Contract", number: "CTR060024 / CT231326", desc: "Standalone third party software Dell as a reseller contract. Limited approved publishers. APEX FOD/DCU, Dell Branded HW & SW restricted. Expires 2026-11-03" },
-                { name: "Dell NASPO Computer Equipment PA - Missouri", entity: "State Contract", number: "23026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" },
-                { name: "University of Missouri- Master Agreement", entity: "State Contract", number: "RFP 24-1146", desc: "Master Agreement DOL discounts on select categories - APEX restricted. Expires 2029-06-30" }
-
+                { name: "Dell Purchase Agreement - MO", entity: "Saint Louis University, MO", number: "", expires: "01-01-2079", desc: "Full catalog including CSG, ISG, services and thirtd party products. APEX FOD/DCU are excluded" },
+                { name: "Ascension Health Purchase Agreement", entity: "Ascension Health Resource and Supply Management Gr", number: "AHIS-0725", expires: "03-31-2027", desc: "Enterprise Contract" },
+                { name: "Washington University, St. Louis, Missouri - Master Agreement", entity: "Washington University in St. Louis", number: "146313855", expires: "04-20-2027", desc: "Master Agreement - Fixed prices on specified configs and services. DOL discount on CSG and ISG -APEX restricted" },
+                { name: "NASPO SVAR - Missouri PA", entity: "State of Missouri", number: "CTR060024 / CT231326", expires: "11-03-2026", desc: "Standalone third party software Dell as a reseller contract. Limited approved publishers. APEX FOD/DCU, Dell Branded HW & SW restricted." },
+                { name: "Dell NASPO Computer Equipment PA - Missouri", entity: "State of Missouri", number: "23026", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
+                { name: "University of Missouri- Master Agreement", entity: "Curators of University of Missouri", number: "RFP 24-1146", expires: "06-30-2029", desc: "Master Agreement DOL discounts on select categories - APEX restricted." },
             ],
             "MT": [
-                { name: "University of Montana - Microcenter Agreement", entity: "State Contract", number: "99000827", desc: "Dell branded products, limited third party products. APEX Restricted. Expires 2079-01-01" },
-                { name: "Dell NASPO Computer Equipment PA - Montana", entity: "State Contract", number: "23026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" }
-
+                { name: "University of Montana - Microcenter Agreement", entity: "University of Montana", number: "99000827", expires: "01-01-2079", desc: "Dell branded products, limited third party products. APEX Restricted." },
+                { name: "Dell NASPO Computer Equipment PA - Montana", entity: "State of Montana", number: "23026", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
             ],
             "NE": [
-                { name: "Nebraska Public Power District Basic Product and Service Agreement", entity: "State Contract", number: "", desc: "Standard configs with fixed pricing, no price obligation on Non-standard LOB's, Full Catalog, Apex Restricted. Expires 2079-01-01" },
-                { name: "NASPO SVAR - Nebraska PA", entity: "State Contract", number: "CTR060024 / 15767 OC", desc: "Standalone third party software Dell as a reseller contract.. APEX FOD/DCU, Dell Branded HW & SW restricted. Expires 2027-04-24" },
-                { name: "Dell NASPO Computer Equipment PA - Nebraska", entity: "State Contract", number: "23026 / 15916", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" }
-
+                { name: "Nebraska Public Power District Basic Product and Service Agreement", entity: "Nebraska Public Power District", number: "", expires: "01-01-2079", desc: "Standard configs with fixed pricing, no price obligation on Non-standard LOB's, Full Catalog, Apex Restricted." },
+                { name: "NASPO SVAR - Nebraska PA", entity: "State of Nebraska", number: "CTR060024 / 15767 OC", expires: "04-24-2027", desc: "Standalone third party software Dell as a reseller contract.. APEX FOD/DCU, Dell Branded HW & SW restricted." },
+                { name: "Dell NASPO Computer Equipment PA - Nebraska", entity: "State of Nebraska", number: "23026 / 15916", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
             ],
             "NV": [
-                { name: "Nevada Board of Regents VPA", entity: "State Contract", number: "VPA - NV", desc: "Full catalog including CSG, ISG, services and thirtd party products. APEX FOD/DCU are excluded Expires 2079-01-01" },
-                { name: "NASPO SVAR - Nevada PA", entity: "State Contract", number: "CTR060024 / BPM00233", desc: "Standalone third party software Dell as a reseller contract.. APEX FOD/DCU, Dell Branded HW & SW restricted. Expires 2027-04-24" },
-                { name: "Dell NASPO Computer Equipment PA - Nevada", entity: "State Contract", number: "23026 / 99SWC-NV24-2", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" }
-
+                { name: "Nevada Board of Regents VPA", entity: "Nevada System of Higher Education, Board of Regent", number: "VPA - NV", expires: "01-01-2079", desc: "Full catalog including CSG, ISG, services and thirtd party products. APEX FOD/DCU are excluded" },
+                { name: "NASPO SVAR - Nevada PA", entity: "State of Nevada", number: "CTR060024 / BPM00233", expires: "04-24-2027", desc: "Standalone third party software Dell as a reseller contract.. APEX FOD/DCU, Dell Branded HW & SW restricted." },
+                { name: "Dell NASPO Computer Equipment PA - Nevada", entity: "State of Nevada", number: "23026 / 99SWC-NV24-2", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
             ],
             "NH": [
-                { name: "Eligible Entity Agreement", entity: "State Contract", number: "ITS75 Software", desc: "ITS75 Software Expires 2026-06-30" },
-                { name: "General Court of New Hampshire ITS75 Eligible Entity Agreement", entity: "State Contract", number: "ITS75 Software", desc: "ITS75 Software Expires 2026-06-30" },
-                { name: "State of New Hampshire ITS75 Eligible Entity Agreement", entity: "State Contract", number: "ITS75 Software", desc: "ITS75 Software Expires 2026-06-30" },
-                { name: "Dell NASPO Computer Equipment PA - New Hampshire", entity: "State Contract", number: "23026 / 8003325", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" },
-                { name: "Dell NASPO Computer Equipment PA - New Hampshire Retirement System", entity: "State Contract", number: "23026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" }
-
+                { name: "Eligible Entity Agreement", entity: "New Hampshire Judicial Branch", number: "ITS75 Software", expires: "06-30-2026", desc: "ITS75 Software" },
+                { name: "General Court of New Hampshire ITS75 Eligible Entity Agreement", entity: "General Court of New Hampshire", number: "ITS75 Software", expires: "06-30-2026", desc: "ITS75 Software" },
+                { name: "State of New Hampshire ITS75 Eligible Entity Agreement", entity: "State of New Hampshire", number: "ITS75 Software", expires: "06-30-2026", desc: "ITS75 Software" },
+                { name: "Dell NASPO Computer Equipment PA - New Hampshire", entity: "State of New Hampshire", number: "23026 / 8003325", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
+                { name: "Dell NASPO Computer Equipment PA - New Hampshire Retirement System", entity: "New Hampshire Retirement System", number: "23026", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
             ],
             "NJ": [
-                { name: "New Jersey Youth & Family Division Integrated Services Agreement", entity: "State Contract", number: "", desc: "Services agreement for installation  and integration services. Expires 2079-01-01" },
-                { name: "Trustees of Princeton University Master Commercial Customer Agreement", entity: "State Contract", number: "DELLM-004292-MAS", desc: "Dell Branded HW & SW. APEX Restricted. Expires 2079-01-01" },
-                { name: "State of New Jersey Software Reseller Contract � T3121", entity: "State Contract", number: "20-TELE-01510", desc: "20-TELE-01510 - Software Only Expires 2026-05-24" },
-                { name: "Dell NASPO Computer Equipment PA - New Jersey", entity: "State Contract", number: "23026 / M0483/24-TEL", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" }
-
+                { name: "New Jersey Youth & Family Division Integrated Services Agreement", entity: "New Jersey, State of, Youth & Family-(Renewed), Di", number: "", expires: "01-01-2079", desc: "Services agreement for installation  and integration services." },
+                { name: "Trustees of Princeton University Master Commercial Customer Agreement", entity: "Trustees of Princeton University", number: "DELLM-004292-MAS", expires: "01-01-2079", desc: "Dell Branded HW & SW. APEX Restricted." },
+                { name: "State of New Jersey Software Reseller Contract � T3121", entity: "State of New Jersey", number: "20-TELE-01510", expires: "05-24-2026", desc: "20-TELE-01510 - Software Only" },
+                { name: "Dell NASPO Computer Equipment PA - New Jersey", entity: "State of New Jersey", number: "23026 / M0483/24-TEL", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
             ],
             "NM": [
-                { name: "University of New Mexico Agreement", entity: "State Contract", number: "PRO-CONA-1834-19", desc: "Purchase Agreement, Full catalog with DOL discounts - Apex restricted. Expires 2028-09-23" },
-                { name: "NASPO SVAR - New Mexico PA", entity: "State Contract", number: "CTR060024 / 10-00000", desc: "Standalone third party software Dell as a reseller contract.. APEX FOD/DCU, Dell Branded HW & SW restricted. Expires 2027-04-24" },
-                { name: "Dell NASPO Computer Equipment PA - New Mexico", entity: "State Contract", number: "23026 / 10-00000-20-", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" }
+                { name: "University of New Mexico Agreement", entity: "Regents of the University of New Mexico", number: "PRO-CONA-1834-19", expires: "09-23-2028", desc: "Purchase Agreement, Full catalog with DOL discounts - Apex restricted." },
+                { name: "NASPO SVAR - New Mexico PA", entity: "State of New Mexico", number: "CTR060024 / 10-00000", expires: "04-24-2027", desc: "Standalone third party software Dell as a reseller contract.. APEX FOD/DCU, Dell Branded HW & SW restricted." },
+                { name: "Dell NASPO Computer Equipment PA - New Mexico", entity: "State of New Mexico", number: "23026 / 10-00000-20-", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
 
             ],
             "NY": [
-                { name: "Dell NYS OGS Umbrella Contract PM20820", entity: "State Contract", number: "PM20820", desc: "Specific Lots for Dell-branded Software, Hardware, Cloud, & Implementation Services. SKU Based, Fixed Price List contract. All Products must be on the Pricelist and Quoted Prices cannot exceed Net NYS Contract Prices on COMET Tool. Leasing not allowed. APEX Restricted. Expires 2030-11-29" },
-                { name: "Rochester Institute VPA - NY", entity: "State Contract", number: "", desc: "DOL Discounts on CSG and ISG, additional fixed pricing on specific configurations,   restrictions for APEX Expires 2079-01-01" },
-                { name: "NYS OGS PD67644 - Lot 2 HW", entity: "State Contract", number: "PD67644 - Lot 2 HW", desc: "PD67644 - Lot 2 HW Expires 2026-12-06" },
-                { name: "Syracuse University Volume Purchase Agreement - NY", entity: "State Contract", number: "", desc: "Fixed pricing on standard configurations and DOL discounts for other products, APEX restricted. Expires 2079-01-01" },
-                { name: "NYS OGS PD67644 Lot 1 SW", entity: "State Contract", number: "PD67644 Lot 1 SW", desc: "PD67644 Lot 1 SW Expires 2026-12-06" },
-                { name: "Cornell University Volume Purchase Agreement - NY", entity: "State Contract", number: "", desc: "Full catalog contract including CSG, ISG, services and third party products, APEX FOD/ DCU are excluded. Pricing includes standard configurations and DOL. Expires 2028-10-31" },
-                { name: "New York University (NYU)", entity: "State Contract", number: "", desc: "Volume Purchase Agreement on Fixed configurations and DOL discounts on additional items.  Excluded APEX FOD Expires 2027-12-31" },
-                { name: "Hospital for Special Surgery Purchase Agreement -  NY", entity: "State Contract", number: "", desc: "Fixed price on standard configurations,  APEX FOD/DCU are excluded Expires 2079-01-01" },
-                { name: "OGS Microsoft Reseller Agreement - NY", entity: "State Contract", number: "OGS Microsoft Resell", desc: "OGS Microsoft Reseller Agreement PS68202 Expires 2027-07-31" },
-                { name: "University of Rochester Master Agreement", entity: "State Contract", number: "", desc: "Full Dell Catalog - Fixed price on specified configurations and DOL on non -standard products, Apex restricted. Expires 2026-06-01" },
-                { name: "NYU Langone Master Services Agreement  dated 6/11/2021", entity: "State Contract", number: "", desc: "Full catalog including CSG, ISG, services and thirtd party products. APEX FOD/DCU are excluded Expires 2079-01-01" },
-                { name: "Columbia University Master Agreement", entity: "State Contract", number: "", desc: "Full catalog including CSG, ISG, services and thirtd party products. APEX FOD/DCU are excluded Expires 2026-11-30" },
-                { name: "Open Text NYS OGS Umbrella Contract", entity: "State Contract", number: "PM67987", desc: "Contract Scope is Open Text Software only Expires 2030-11-30" },
-                { name: "NYC Board of Education - Microsoft only Agreement", entity: "State Contract", number: "", desc: "NYC-DOE Microsoft Agreement for Public K12 -Microsoft Only Expires 2028-06-30" },
-                { name: "New York OGS Microsoft PM 69723", entity: "State Contract", number: "FY22NYSOGSAmendDell;", desc: "OGS Microsoft Reseller Agreement PM 69723 Expires 2030-11-29" },
-                { name: "DO NOT USE - MTA Parent Contract", entity: "State Contract", number: "DO NOT USE - 15107-0", desc: "Contract code created for DCAT system requirements purposes only Expires 2026-07-10" },
-                { name: "NYS OGS Aggregate Hardware Buy 25-01 Agreement", entity: "State Contract", number: "NYS Aggregate Buy Ha", desc: "The Aggregate Buy (Agg Buy) is a Purchasing Initiative offering aggressively discounted configurations under the NY OGS Umbrella Contract. All terms and conditions of the Umbrella Contract apply. Agg Buy is limited to Dell branded Products in specifically approved configurations. All quotes for AggBuy approved models must be through the AggBuy Premier Page. No Authorized Resellers available. Expires 2027-11-06" },
-                { name: "New York OTI Microsoft Agreement", entity: "State Contract", number: "(MA1) 858 2021120082", desc: "(MA1) 858 20211200826 Expires 2030-09-30" }
-
+                { name: "Dell NYS OGS Umbrella Contract PM20820", entity: "New York State Office of General Services (NYS OGS", number: "PM20820", expires: "11-29-2030", desc: "Specific Lots for Dell-branded Software, Hardware, Cloud, & Implementation Services. SKU Based, Fixed Price List contract. All Products must be on the Pricelist and Quoted Prices cannot exceed Net NYS Contract Prices on COMET Tool. Leasing not allowed. APEX Restricted." },
+                { name: "Rochester Institute VPA - NY", entity: "Rochester Institute of Technology, NY", number: "", expires: "01-01-2079", desc: "DOL Discounts on CSG and ISG, additional fixed pricing on specific configurations,   restrictions for APEX" },
+                { name: "NYS OGS PD67644 - Lot 2 HW", entity: "New York State Office of General Services (NYS OGS", number: "PD67644 - Lot 2 HW", expires: "12-06-2026", desc: "PD67644 - Lot 2 HW" },
+                { name: "Syracuse University Volume Purchase Agreement - NY", entity: "Syracuse University, NY", number: "", expires: "01-01-2079", desc: "Fixed pricing on standard configurations and DOL discounts for other products, APEX restricted." },
+                { name: "NYS OGS PD67644 Lot 1 SW", entity: "New York State Office of General Services (NYS OGS", number: "PD67644 Lot 1 SW", expires: "12-06-2026", desc: "PD67644 Lot 1 SW" },
+                { name: "Cornell University Volume Purchase Agreement - NY", entity: "Cornell University, NY", number: "", expires: "10-31-2028", desc: "Full catalog contract including CSG, ISG, services and third party products, APEX FOD/ DCU are excluded. Pricing includes standard configurations and DOL." },
+                { name: "New York University (NYU)", entity: "New York University (NYU)", number: "", expires: "12-31-2027", desc: "Volume Purchase Agreement on Fixed configurations and DOL discounts on additional items.  Excluded APEX FOD" },
+                { name: "Hospital for Special Surgery Purchase Agreement -  NY", entity: "Hospital for Special Surgery, NY", number: "", expires: "01-01-2079", desc: "Fixed price on standard configurations,  APEX FOD/DCU are excluded" },
+                { name: "OGS Microsoft Reseller Agreement - NY", entity: "New York State Office of General Services (NYS OGS", number: "OGS Microsoft Resell", expires: "07-31-2027", desc: "OGS Microsoft Reseller Agreement PS68202" },
+                { name: "University of Rochester Master Agreement", entity: "University of Rochester, NY", number: "", expires: "06-01-2026", desc: "Full Dell Catalog - Fixed price on specified configurations and DOL on non -standard products, Apex restricted." },
+                { name: "NYU Langone Master Services Agreement  dated 6/11/2021", entity: "NYU Langone Hospitals", number: "", expires: "01-01-2079", desc: "Full catalog including CSG, ISG, services and thirtd party products. APEX FOD/DCU are excluded" },
+                { name: "Columbia University Master Agreement", entity: "Trustees of Columbia University in the City of New", number: "", expires: "11-30-2026", desc: "Full catalog including CSG, ISG, services and thirtd party products. APEX FOD/DCU are excluded" },
+                { name: "Open Text NYS OGS Umbrella Contract", entity: "Open Text NYS - Office of General Services (NYS OG", number: "PM67987", expires: "11-30-2030", desc: "Contract Scope is Open Text Software only" },
+                { name: "NYC Board of Education - Microsoft only Agreement", entity: "NYC Board of Education", number: "", expires: "06-30-2028", desc: "NYC-DOE Microsoft Agreement for Public K12 -Microsoft Only" },
+                { name: "New York OGS Microsoft PM 69723", entity: "New York State Office of General Services Microsof", number: "FY22NYSOGSAmendDell;", expires: "11-29-2030", desc: "OGS Microsoft Reseller Agreement PM 69723" },
+                { name: "DO NOT USE - MTA Parent Contract", entity: "QnA Tech (Quality and Assurance Technology)", number: "DO NOT USE - 15107-0", expires: "07-10-2026", desc: "Contract code created for DCAT system requirements purposes only" },
+                { name: "NYS OGS Aggregate Hardware Buy 25-01 Agreement", entity: "New York State Office of General Services (NYS OGS", number: "NYS Aggregate Buy Ha", expires: "11-06-2027", desc: "The Aggregate Buy (�Agg Buy�) is a Purchasing Initiative offering aggressively discounted configurations under the NY OGS Umbrella Contract. All terms and conditions of the Umbrella Contract apply. Agg Buy is limited to Dell branded Products in specifically approved configurations. All quotes for AggBuy approved models must be through the AggBuy Premier Page. No Authorized Resellers available." },
+                { name: "New York OTI Microsoft Agreement", entity: "New York State Office of General Services Microsof", number: "(MA1) 858 2021120082", expires: "09-30-2030", desc: "(MA1) 858 20211200826" },
             ],
             "NC": [
-                { name: "State of North Carolina Purchase Agreement", entity: "State Contract", number: "IFB 13-10803434", desc: "IFB 13-10803434 Expires 2079-01-01" },
-                { name: "University of North Carolina Health Care System Purchase Agreement", entity: "State Contract", number: "", desc: "Fixed pricing on standard configurations. DOL for non standard configs. APEX FOD/DCU are excluded Expires 2079-01-01" },
-                { name: "Duke University - Volume Purchase Agreement", entity: "State Contract", number: "", desc: "Full catalog including CSG, ISG, services and thirtd party products. APEX FOD/DCU are excluded Expires 2079-01-01" },
-                { name: "State of North Carolina - Microcomputers, Peripherals, and related Services", entity: "State Contract", number: "204A-ITS-400203", desc: "204A-ITS-400203 Expires 2026-09-30" },
-                { name: "University of North Carolina, Greensboro", entity: "State Contract", number: "", desc: "Full catalog including CSG, ISG, services and thirtd party products. APEX FOD/DCU are excluded Expires 2079-01-01" },
-                { name: "State of North Carolina - Dell Servers, Storage, Networking and IT Infrastructure", entity: "State Contract", number: "204X ITS-400277", desc: "Dell Branded Servers, Storage, Networking Equipment, IT Infrastructure Software, IT Infrastructure Converged Solutions, IT Infrastructure Peripheral Components. CSG & APEX Restricted. Expires 2026-06-30" },
-                { name: "EMC IT Infrastructure Solutions", entity: "State Contract", number: "EMC 204X", desc: "EMC Hardware and Software. APEX is restricted. Expires 2026-06-30" },
-                { name: "Mobile Ruggedized Computers, Accessories and Peripherals", entity: "State Contract", number: "IFB ITS-401070 NC 20", desc: "NC 204B - Mobile Rugged Computers Expires 2026-10-31" },
-                { name: "State of North Carolina Virtual Cybersecurity Team Services", entity: "State Contract", number: "41-900124", desc: "(3) Level One Security Analysts to provide up to 6,240 non?contiguous hours (2,080 hours each) of remote Cybersecurity Monitoring Services at a rate of $192.00 per hour (one year term) Expires 2026-06-01" }
-
+                { name: "State of North Carolina Purchase Agreement", entity: "State of North Carolina", number: "IFB 13-10803434", expires: "01-01-2079", desc: "IFB 13-10803434" },
+                { name: "University of North Carolina Health Care System Purchase Agreement", entity: "University of North Carolina Health Care System (U", number: "", expires: "01-01-2079", desc: "Fixed pricing on standard configurations. DOL for non standard configs. APEX FOD/DCU are excluded" },
+                { name: "Duke University - Volume Purchase Agreement", entity: "Duke University, North Carolina", number: "", expires: "01-01-2079", desc: "Full catalog including CSG, ISG, services and thirtd party products. APEX FOD/DCU are excluded" },
+                { name: "State of North Carolina - Microcomputers, Peripherals, and related Services", entity: "State of North Carolina Office of Information Tech", number: "204A-ITS-400203", expires: "09-30-2026", desc: "204A-ITS-400203" },
+                { name: "University of North Carolina, Greensboro", entity: "University of North Carolina, Greensboro, NC", number: "", expires: "01-01-2079", desc: "Full catalog including CSG, ISG, services and thirtd party products. APEX FOD/DCU are excluded" },
+                { name: "State of North Carolina - Dell Servers, Storage, Networking and IT Infrastructure", entity: "State of North Carolina Office of Information Tech", number: "204X ITS-400277", expires: "06-30-2026", desc: "Dell Branded Servers, Storage, Networking Equipment, IT Infrastructure Software, IT Infrastructure Converged Solutions, IT Infrastructure Peripheral Components. CSG & APEX Restricted." },
+                { name: "EMC IT Infrastructure Solutions", entity: "State of North Carolina", number: "EMC 204X", expires: "06-30-2026", desc: "EMC Hardware and Software. APEX is restricted." },
+                { name: "Mobile Ruggedized Computers, Accessories and Peripherals", entity: "State of North Carolina Office of Information Tech", number: "IFB ITS-401070 NC 20", expires: "10-31-2026", desc: "NC 204B - Mobile Rugged Computers" },
+                { name: "State of North Carolina Virtual Cybersecurity Team Services", entity: "State of North Carolina/Department of Information", number: "41-900124", expires: "06-01-2026", desc: "(3) Level One Security Analysts to provide up to 6,240 non?contiguous hours (2,080 hours each) of remote Cybersecurity Monitoring Services at a rate of $192.00 per hour (one year term)" },
             ],
             "ND": [
-                { name: "NASPO SVAR - North Dakota PA", entity: "State Contract", number: "CTR060024", desc: "Standalone third party software Dell as a reseller contract.. APEX FOD/DCU, Dell Branded HW & SW restricted. Expires 2027-04-24" },
-                { name: "Dell NASPO Computer Equipment PA - North Dakota", entity: "State Contract", number: "23026 / 022-Dell", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" }
-
+                { name: "NASPO SVAR - North Dakota PA", entity: "State of North Dakota", number: "CTR060024", expires: "04-24-2027", desc: "Standalone third party software Dell as a reseller contract.. APEX FOD/DCU, Dell Branded HW & SW restricted." },
+                { name: "Dell NASPO Computer Equipment PA - North Dakota", entity: "State of North Dakota", number: "23026 / 022-Dell", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
             ],
             "OH": [
-                { name: "Case Western Reserve University MCCA", entity: "State Contract", number: "", desc: "MCCA DOL discounts on CSG, and ISG  - APEX FOD restricted. Expires 2079-01-01" },
-                { name: "University of Akron PPMS 041999", entity: "State Contract", number: "99000847", desc: "Dell branded products, limited third party products. APEX Restricted. Expires 2079-01-01" },
-                { name: "State of Ohio Computer Hardware, Software, and IT Services", entity: "State Contract", number: "STS033-534278", desc: "OH PC STS 534278 | Based on Fed GSA for Client Only -Pricing on fixed configurations Expires 2026-02-28" },
-                { name: "State of Ohio Computer Hardware, Software, and IT Services", entity: "State Contract", number: "STS033-534109", desc: "Dell branded products, limited third party products and related services. In order to be on the Ohio STS, it has to be on the Dell GSA Schedule. Expires 2026-02-28" },
-                { name: "IUC Ohio - Microsoft Reseller Agreement", entity: "State Contract", number: "UN13-047", desc: "UN18-100 Microsoft Reseller Agreement Expires 2026-06-30" },
-                { name: "Rebate Program Agreement for University of Cincinnati", entity: "State Contract", number: "MHEC-04152022", desc: "MHEC Purchase and Rebate Agreement for U of Cincinnati Expires 2026-06-30" },
-                { name: "University of Toledo - Customer Sales Agreement", entity: "State Contract", number: "", desc: "all Dell Technology hardware and software products - Apex and third party products are restricted. Expires 2028-02-28" },
-                { name: "State of Ohio - Microsoft Licensing Solution Provider", entity: "State Contract", number: "CSP029109", desc: "Resell of Microsoft products and services to Ohio state and local governments and eligible education customers Expires 2030-06-30" }
-
+                { name: "Case Western Reserve University MCCA", entity: "Case Western Reserve University, OH", number: "", expires: "01-01-2079", desc: "MCCA DOL discounts on CSG, and ISG  - APEX FOD restricted." },
+                { name: "University of Akron PPMS 041999", entity: "University of Akron, OH", number: "99000847", expires: "01-01-2079", desc: "Dell branded products, limited third party products. APEX Restricted." },
+                { name: "State of Ohio Computer Hardware, Software, and IT Services", entity: "State of Ohio", number: "STS033-534278", expires: "02-28-2026", desc: "OH PC STS 534278 | Based on Fed GSA for Client Only -Pricing on fixed configurations" },
+                { name: "State of Ohio Computer Hardware, Software, and IT Services", entity: "State of Ohio", number: "STS033-534109", expires: "02-28-2026", desc: "Dell branded products, limited third party products and related services. In order to be on the Ohio STS, it has to be on the Dell GSA Schedule." },
+                { name: "IUC Ohio - Microsoft Reseller Agreement", entity: "Inter-University Council of Ohio (IUC)", number: "UN13-047", expires: "06-30-2026", desc: "UN18-100 Microsoft Reseller Agreement" },
+                { name: "Rebate Program Agreement for University of Cincinnati", entity: "University of Cincinnati", number: "MHEC-04152022", expires: "06-30-2026", desc: "MHEC Purchase and Rebate Agreement for U of Cincinnati" },
+                { name: "University of Toledo - Customer Sales Agreement", entity: "University of Toledo, Ohio", number: "", expires: "02-28-2028", desc: "all Dell Technology hardware and software products - Apex and third party products are restricted." },
+                { name: "State of Ohio - Microsoft Licensing Solution Provider", entity: "Ohio Department of Administrative Services", number: "CSP029109", expires: "06-30-2030", desc: "Resell of Microsoft products and services to Ohio state and local governments and eligible education customers" },
             ],
             "OK": [
-                { name: "University of Oklahoma, RFP-R-5274-07-OK", entity: "State Contract", number: "OK-RFP-R-5274-07", desc: "Computer related products & services; excluding APEX Expires 2027-06-30" },
-                { name: "Rebate Agreement-OK", entity: "State Contract", number: "OK-000055", desc: "VPA & Rebate Agreement - Standard configs with fixed price and Dol for specified LOB's  - Full catalog; APEX is Restricted Expires 2026-07-31" },
-                { name: "State of Oklahoma Office of Management and Enterprise Services (OMES)", entity: "State Contract", number: "SW1020D", desc: "Statewide contract for support of end-user computing devices, servers, storage, and peripherals,including APEX/FOD/DCU Expires 2027-07-19" },
-                { name: "State of Oklahoma Office of Management and Enterprise Services (OMES) Statewide 1041 Software Value Added Reseller", entity: "State Contract", number: "1041", desc: "Statewide 1041 Software Value Added Reseller - Software & Services; DOL on select software - Apex, hardware, and Dell Branded SW restricted Expires 2029-05-28" }
-
+                { name: "University of Oklahoma, RFP-R-5274-07-OK", entity: "University of Oklahoma", number: "OK-RFP-R-5274-07", expires: "06-30-2027", desc: "Computer related products & services; excluding APEX" },
+                { name: "Rebate Agreement-OK", entity: "Oklahoma State University, Stillwater, OK", number: "OK-000055", expires: "07-31-2026", desc: "VPA & Rebate Agreement - Standard configs with fixed price and Dol for specified LOB's  - Full catalog; APEX is Restricted" },
+                { name: "State of Oklahoma Office of Management and Enterprise Services (OMES)", entity: "Oklahoma OMES", number: "SW1020D", expires: "07-19-2027", desc: "Statewide contract for support of end-user computing devices, servers, storage, and peripherals,including APEX/FOD/DCU" },
+                { name: "State of Oklahoma Office of Management and Enterprise Services (OMES) Statewide 1041 Software Value Added Reseller", entity: "Oklahoma OMES", number: "1041", expires: "05-28-2029", desc: "Statewide 1041 Software Value Added Reseller - Software & Services; DOL on select software - Apex, hardware, and Dell Branded SW restricted" },
             ],
             "OR": [
-                { name: "OHSU Volume Purchase Agreement", entity: "State Contract", number: "VPA S-98-101 / 98000", desc: "CSG Catalog and third party, Apex is restricted Expires 2079-01-01" },
-                { name: "State of Oregon, Dept. of Admin Services - MPA", entity: "State Contract", number: "PO-10700-00018356", desc: "Dell full catalog; APEX restricted Expires 2028-05-31" },
-                { name: "OETC-16R-Computers", entity: "State Contract", number: "OETC-16R-Computers", desc: "DOL on CSG and ISG products(on pricing sheet) - Apex restricted Expires 2027-06-14" },
-                { name: "Marion County, Oregon - Price Agreement IT-4334-21", entity: "State Contract", number: "IT-4334-21", desc: "Licensing and Support of MS Products and Enterprise Agreements (EA) Management.  APEX,Dell Branded HW & SW restricted. Expires 2027-09-30" },
-                { name: "Dell Oregon State University Rebate Agreement", entity: "State Contract", number: "MHEC-04152022 - 1836", desc: "Full catalog including APEX and Third Party Expires 2026-06-30" },
-                { name: "Dell University of Oregon Supplier Enablement Agreement", entity: "State Contract", number: "PCS# 432000-00969-SE", desc: "Full catalog including APEX and Third Party Expires 2027-01-21" }
-
+                { name: "OHSU Volume Purchase Agreement", entity: "Oregon Health & Sciences University", number: "VPA S-98-101 / 98000", expires: "01-01-2079", desc: "CSG Catalog and third party, Apex is restricted" },
+                { name: "State of Oregon, Dept. of Admin Services - MPA", entity: "State of Oregon Dept. of Administrative Services", number: "PO-10700-00018356", expires: "05-31-2028", desc: "Dell full catalog; APEX restricted" },
+                { name: "OETC-16R-Computers", entity: "Organization for Educational Technology and Curric", number: "OETC-16R-Computers", expires: "06-14-2027", desc: "DOL on CSG and ISG products(on pricing sheet) - Apex restricted" },
+                { name: "Marion County, Oregon - Price Agreement IT-4334-21", entity: "Marion County, OR", number: "IT-4334-21", expires: "09-30-2027", desc: "Licensing and Support of MS Products and Enterprise Agreements (EA) Management.  APEX,Dell Branded HW & SW restricted." },
+                { name: "Dell Oregon State University Rebate Agreement", entity: "Oregon State University", number: "MHEC-04152022 - 1836", expires: "06-30-2026", desc: "Full catalog including APEX and Third Party" },
+                { name: "Dell University of Oregon Supplier Enablement Agreement", entity: "University of Oregon", number: "PCS# 432000-00969-SE", expires: "01-21-2027", desc: "Full catalog including APEX and Third Party" },
             ],
             "PA": [
-                { name: "Temple University - VPA", entity: "State Contract", number: "", desc: "Standard configurations with fixed price discounts and DOL discounts on certain configurations listed on contract. APEX FOD/DCU are excluded. Expires 2079-01-01" },
-                { name: "Guthrie Healthcare System Volume Purchasing Agreement", entity: "State Contract", number: "00002440/930103", desc: "CSG Discount based on purchased volume. APEX FOD/DCU are excluded Expires 2079-01-01" },
-                { name: "Universal Health Services - Corporate Purchasing Agreement", entity: "State Contract", number: "1324855", desc: "Corporate Purchasing Agreement Expires 2079-01-01" },
-                { name: "Master Commercial Customer Agreement for Drexel University", entity: "State Contract", number: "", desc: "Standard configs with fixed pricing, DOL on Non-standard CSG. APEX Restricted. Expires 2079-01-01" },
-                { name: "Thomas Jefferson University, PA", entity: "State Contract", number: "", desc: "CSG fixed 10% discount . APEX FOD/DCU are excluded Expires 2079-01-01" },
-                { name: "Master Commercial Customer Agreement for Villanova University", entity: "State Contract", number: "", desc: "MCCA DOL discounts on CSG, ISG and 3rd party - APEX FOD restricted. Expires 2079-01-01" },
-                { name: "Microcenter Store Premier Page Agreement", entity: "State Contract", number: "99001508", desc: "Premier page agreement for the full Dell Catalog - APEX FOD/DCU are excluded Expires 2079-01-01" },
-                { name: "Carnegie Mellon University - Preferred Supplier Agreement", entity: "State Contract", number: "", desc: "Preferred Supplier Agr. DOL discounts on full dell catalog - Apex restricted Expires 2027-09-03" },
-                { name: "University of Pittsburgh Medical Center - Purchase Agreement for Products & Services", entity: "State Contract", number: "", desc: "Client and Server with Software & Services.  Client pricing is fixed standard configurations. Expires 2027-12-31" },
-                { name: "Temple University Health System - Letter Agreement", entity: "State Contract", number: "", desc: "Standard config contract Expires 2028-10-20" },
-                { name: "Pennsylvania State University - Customer Sales Agreement", entity: "State Contract", number: "", desc: "CSA -Fixed price on specified configurations and DOL on non -standard products, Apex restricted. Expires 2026-07-14" },
-                { name: "Pennsylvania DGS COSTARS-3 IT Hardware", entity: "State Contract", number: "COSTARS-003-E22-603", desc: "PA state HW contact including CSG, ISG and 3rd party products. There are some exclusions including standalone software, standalone services, subscription-based products (FOD/DCU), etc. Expires 2026-11-03" },
-                { name: "University of Pittsburgh Contracted Supplier Agreement", entity: "State Contract", number: "", desc: "Fixed prices on specified configurations, DOL discount on the remaining catalog - Apex restricted Expires 2028-11-30" },
-                { name: "Dell NASPO Computer Equipment PA - County of Berks, Pennsylvania", entity: "State Contract", number: "23026 / County of Be", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" },
-                { name: "Dell NASPO Computer Equipment PA - Pennsylvania Office of Attorney General", entity: "State Contract", number: "23026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" },
-                { name: "University of Pennsylvania IT Master Service Agreement", entity: "State Contract", number: "", desc: "Standard Configurations for Dell Pro/Dell Pro Max and full catalog with DOLs. Consumer products, 3rd party products and APEX FOD/DCU are included with no pricing commitments. Expires 2027-12-31" }
-
+                { name: "Temple University - VPA", entity: "Temple University, PA", number: "", expires: "01-01-2079", desc: "Standard configurations with fixed price discounts and DOL discounts on certain configurations listed on contract. APEX FOD/DCU are excluded." },
+                { name: "Guthrie Healthcare System Volume Purchasing Agreement", entity: "Guthrie Healthcare System", number: "00002440/930103", expires: "01-01-2079", desc: "CSG Discount based on purchased volume. APEX FOD/DCU are excluded" },
+                { name: "Universal Health Services - Corporate Purchasing Agreement", entity: "Universal Health Services, PA", number: "1324855", expires: "01-01-2079", desc: "Corporate Purchasing Agreement" },
+                { name: "Master Commercial Customer Agreement for Drexel University", entity: "Drexel University, PA", number: "", expires: "01-01-2079", desc: "Standard configs with fixed pricing, DOL on Non-standard CSG. APEX Restricted." },
+                { name: "Thomas Jefferson University, PA", entity: "Thomas Jefferson University, PA", number: "", expires: "01-01-2079", desc: "CSG fixed 10% discount . APEX FOD/DCU are excluded" },
+                { name: "Master Commercial Customer Agreement for Villanova University", entity: "Villanova University, PA", number: "", expires: "01-01-2079", desc: "MCCA DOL discounts on CSG, ISG and 3rd party - APEX FOD restricted." },
+                { name: "Microcenter Store Premier Page Agreement", entity: "Duquesne University, PA", number: "99001508", expires: "01-01-2079", desc: "Premier page agreement for the full Dell Catalog - APEX FOD/DCU are excluded" },
+                { name: "Carnegie Mellon University - Preferred Supplier Agreement", entity: "Carnegie Mellon University, PA", number: "", expires: "09-03-2027", desc: "Preferred Supplier Agr. DOL discounts on full dell catalog - Apex restricted" },
+                { name: "University of Pittsburgh Medical Center - Purchase Agreement for Products & Services", entity: "University of Pittsburgh Medical Center", number: "", expires: "12-31-2027", desc: "Client and Server with Software & Services.  Client pricing is fixed standard configurations." },
+                { name: "Temple University Health System - Letter Agreement", entity: "Temple University Health System Inc.", number: "", expires: "10-20-2028", desc: "Standard config contract" },
+                { name: "Pennsylvania State University - Customer Sales Agreement", entity: "Pennsylvania State University, University Park", number: "", expires: "07-14-2026", desc: "CSA -Fixed price on specified configurations and DOL on non -standard products, Apex restricted." },
+                { name: "Pennsylvania DGS COSTARS-3 IT Hardware", entity: "State of Pennsylvania Dept. of General Services", number: "COSTARS-003-E22-603", expires: "11-03-2026", desc: "PA state HW contact including CSG, ISG and 3rd party products. There are some exclusions including standalone software, standalone services, subscription-based products (FOD/DCU), etc." },
+                { name: "University of Pittsburgh Contracted Supplier Agreement", entity: "University of Pittsburgh of the Commonwealth Syste", number: "", expires: "11-30-2028", desc: "Fixed prices on specified configurations, DOL discount on the remaining catalog - Apex restricted" },
+                { name: "Dell NASPO Computer Equipment PA - County of Berks, Pennsylvania", entity: "County of Berks, Pennsylvania", number: "23026 / County of Be", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
+                { name: "Dell NASPO Computer Equipment PA - Pennsylvania Office of Attorney General", entity: "Pennsylvania Office of Attorney General", number: "23026", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
+                { name: "University of Pennsylvania IT Master Service Agreement", entity: "Trustees of the University of Pennsylvania", number: "", expires: "12-31-2027", desc: "Standard Configurations for Dell Pro/Dell Pro Max and full catalog with DOLs. Consumer products, 3rd party products and APEX FOD/DCU are included with no pricing commitments." },
             ],
             "RI": [
-                { name: "Brown Univeristy Volume Purchase Agreement - Rhode Island", entity: "State Contract", number: "", desc: "VPA - Fixed prices on specified configurations, DOL discount on the remaining catalog - Apex restricted Expires 2027-01-31" },
-                { name: "Rhode Island ITS58 Purchase Agreement", entity: "State Contract", number: "MPA-227", desc: "Rhode Island ITS58 Purchase Agreement - Software only contract Expires 2026-06-30" },
-                { name: "Lifespan MCCA - Rhode Island", entity: "State Contract", number: "", desc: "MCCA - Fixed priced configurations only. Expires 2028-12-31" },
-                { name: "State of Rhode Island PA ITS75 Software", entity: "State Contract", number: "ITS75 Software", desc: "ITS75 - Third party software, SaaS, PaaS or IaaS and related services. Expires 2026-06-30" },
-                { name: "Dell NASPO Computer Equipment PA - Rhode Island", entity: "State Contract", number: "23026 / 3870457", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" },
-                { name: "Lifespan Master Customer Agreement", entity: "State Contract", number: "203972", desc: "Enterprise Contract Expires 2079-01-01" }
-
+                { name: "Brown Univeristy Volume Purchase Agreement - Rhode Island", entity: "Brown University", number: "", expires: "01-31-2027", desc: "VPA - Fixed prices on specified configurations, DOL discount on the remaining catalog - Apex restricted" },
+                { name: "Rhode Island ITS58 Purchase Agreement", entity: "State of Rhode Island", number: "MPA-227", expires: "06-30-2026", desc: "Rhode Island ITS58 Purchase Agreement - Software only contract" },
+                { name: "Lifespan MCCA - Rhode Island", entity: "Lifespan Corporation", number: "", expires: "12-31-2028", desc: "MCCA - Fixed priced configurations only." },
+                { name: "State of Rhode Island PA ITS75 Software", entity: "State of Rhode Island", number: "ITS75 Software", expires: "06-30-2026", desc: "ITS75 - Third party software, SaaS, PaaS or IaaS and related services." },
+                { name: "Dell NASPO Computer Equipment PA - Rhode Island", entity: "State of Rhode Island", number: "23026 / 3870457", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
+                { name: "Lifespan Master Customer Agreement", entity: "Lifespan Corporation", number: "203972", expires: "01-01-2079", desc: "Enterprise Contract" },
             ],
             "SC": [
-                { name: "Dell NASPO Computer Equipment PA - South Carolina", entity: "State Contract", number: "23026 / 4400032694", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" }
-
+                { name: "Dell NASPO Computer Equipment PA - South Carolina", entity: "State of South Carolina", number: "23026 / 4400032694", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
             ],
             "SD": [
-                { name: "NASPO SVAR - South Dakota PA", entity: "State Contract", number: "CTR060024 / 17721", desc: "Standalone third party software Dell as a reseller contract.. APEX FOD/DCU, Dell Branded HW & SW restricted. Expires 2027-04-24" },
-                { name: "Dell NASPO Computer Equipment PA - South Dakota", entity: "State Contract", number: "23026 / 17797", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" }
-
+                { name: "NASPO SVAR - South Dakota PA", entity: "State of South Dakota", number: "CTR060024 / 17721", expires: "04-24-2027", desc: "Standalone third party software Dell as a reseller contract.. APEX FOD/DCU, Dell Branded HW & SW restricted." },
+                { name: "Dell NASPO Computer Equipment PA - South Dakota", entity: "State of South Dakota", number: "23026 / 17797", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
             ],
             "TN": [
                 { name: "St. Jude's Children's Research Hospital - Commercial Terms of Sale", entity: "State Contract", number: "", desc: "St. Jude's Children's Research Hospital - Commercial Terms of Sale Expires 2079-01-01" },
@@ -596,69 +563,115 @@
                 { name: "University of Memphis, Tennessee - Purchase Agreement", entity: "State Contract", number: "", desc: "Full catalog contract including CSG, ISG, services and third party products, APEX FOD/ DCU are excluded. Pricing includes standard configurations and DOL. Expires 2027-06-30" },
                 { name: "NASPO SVAR - Tennessee PA", entity: "State Contract", number: "CTR060024 / 77341", desc: "Standalone third party software Dell as a reseller contract. Limited approved publishers. APEX FOD/DCU, Dell Branded HW & SW restricted. Expires 2026-10-30" },
                 { name: "Dell NASPO Computer Equipment PA - Tennessee", entity: "State Contract", number: "23026 / 81354", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" }
-
             ],
             "TX": [
-                { name: "Essilor of America, Inc, Customer Purchase Agreement-TX", entity: "State Contract", number: "TX-Volume Purchase (", desc: "International Customer Purchase Agreement - Standard configurations and DOL discounts on desktops and laptops only Expires 2079-01-01" },
-                { name: "Memorial Hermann Healthcare, Volume Purchase - TX", entity: "State Contract", number: "TX-Volume Purchase (", desc: "Master Product Loan, Evaluation, Rental Agreement. EMC hardware, software, order prodcuts for eval and rental Expires 2079-01-01" },
-                { name: "R7 Solutions, Value  Added Remarketer Agreement-TX", entity: "State Contract", number: "TX-Value  Added Rema", desc: "Dell reseller agreement; (VAR) Dell branded hardware & related products, software, third-party products Expires 2079-01-01" },
-                { name: "Baylor College of Medicine, Volume Purchase Agreement-TX", entity: "State Contract", number: "TX-Volume Purchase (", desc: "DOL pricing on CSG and ISG  products, APEX FOD/DCU are excluded Expires 2079-01-01" },
-                { name: "City of Houston - 4600016139", entity: "State Contract", number: "4600016139", desc: "Fixed price contract for CSG products and accesories. Expires 2026-06-18" },
-                { name: "City of Austin Dell Products and Services", entity: "State Contract", number: "MA 5000 NC220000084", desc: "State Contract for Dell Branded Products and Related Services. Excluded products: 3rd party, TLA, APEX FOD/DCU. Expires 2027-07-11" },
-                { name: "The University of Texas System WINDOWS-BASED PERSONAL COMPUTERS AND RELATED SERVICES", entity: "State Contract", number: "UTSSCA-UTSPSA-0026", desc: "CSG products including related software & services; Apex FOD & third party restricted Expires 2027-09-30" },
-                { name: "San Antonio ISD - Chrome OS and Windows Devices, Services, and Accessories", entity: "State Contract", number: "24-019(BS)", desc: "Standard Configurations with fixed pricing. Chrome OS and Windows Devices, Services, and Accessories. APEX restricted. Expires 2026-10-21" },
-                { name: "Technology Products, Services, and Solutions Catalog TEXBUY RFPW#024-010", entity: "State Contract", number: "RFPW#024-010", desc: "Technology Products, Services, Solutions Catalog. Dell branded & Third party available. CSG & ISG. APEX excluded. Expires 2026-06-30" },
-                { name: "State of Texas Department of Information Resources (TX DIR)", entity: "State Contract", number: "DIR-CPO-5792", desc: "State Contract for Dell Branded Products and Related Services. Excluded products: 3rd party, TLA, APEX FOD/DCU. Expires 2027-04-03" },
-                { name: "University of Texas System Preferred Supplier agreement for Data Center Hardware & Related Services", entity: "State Contract", number: "UTSSCA-UTSPSA-0063", desc: "DATA CENTER HARDWARE SERVICES Expires 2028-02-29" },
-                { name: "State of Texas Department of Information Resources (TX DIR) Data Storage, Data Communications & Networking Equipment and Related Services Contract", entity: "State Contract", number: "DIR-CPO-5371", desc: "Data Storage, Data Communications & Networking Equipment and Related Services, Product, Services, APEX, TLA, FOD, DCU, Third party pending. CSG not allowed Expires 2027-05-14" }
-
+                { name: "Essilor of America, Inc, Customer Purchase Agreement-TX", entity: "Essilor of America, Inc.", number: "TX-Volume Purchase", expires: "01-01-2079", desc: "International Customer Purchase Agreement - Standard configurations and DOL discounts on desktops and laptops only" },
+                { name: "Memorial Hermann Healthcare, Volume Purchase - TX", entity: "Memorial Hermann Healthcare System, TX", number: "TX-Volume Purchase", expires: "01-01-2079", desc: "Master Product Loan, Evaluation, Rental Agreement. EMC hardware, software, order prodcuts for eval and rental" },
+                { name: "R7 Solutions, Value  Added Remarketer Agreement-TX", entity: "R7 Solutions", number: "TX-Value  Added Rema", expires: "01-01-2079", desc: "Dell reseller agreement; (VAR) Dell branded hardware & related products, software, third-party products" },
+                { name: "Baylor College of Medicine, Volume Purchase Agreement-TX", entity: "Baylor College of Medicine, TX", number: "TX-Volume Purchase", expires: "01-01-2079", desc: "DOL pricing on CSG and ISG  products, APEX FOD/DCU are excluded" },
+                { name: "City of Houston - 4600016139", entity: "City of Houston", number: "4600016139", expires: "06-18-2026", desc: "Fixed price contract for CSG products and accesories." },
+                { name: "City of Austin Dell Products and Services", entity: "City of Austin", number: "MA 5000 NC220000084", expires: "07-11-2027", desc: "State Contract for Dell Branded Products and Related Services. Excluded products: 3rd party, TLA, APEX FOD/DCU." },
+                { name: "The University of Texas System WINDOWS-BASED PERSONAL COMPUTERS AND RELATED SERVICES", entity: "University of Texas System", number: "UTSSCA-UTSPSA-0026", expires: "09-30-2027", desc: "CSG products including related software & services; Apex FOD & third party restricted" },
+                { name: "San Antonio ISD - Chrome OS and Windows Devices, Services, and Accessories", entity: "San Antonio ISD", number: "24-019(BS)", expires: "10-21-2026", desc: "Standard Configurations with fixed pricing. Chrome OS and Windows Devices, Services, and Accessories. APEX restricted." },
+                { name: "Technology Products, Services, and Solutions Catalog TEXBUY RFPW#024-010", entity: "Region 16 Education Service Center", number: "RFPW#024-010", expires: "06-30-2026", desc: "Technology Products, Services, Solutions Catalog. Dell branded & Third party available. CSG & ISG. APEX excluded." },
+                { name: "State of Texas Department of Information Resources (TX DIR)", entity: "Texas Department of Information Resources", number: "DIR-CPO-5792", expires: "04-03-2027", desc: "State Contract for Dell Branded Products and Related Services. Excluded products: 3rd party, TLA, APEX FOD/DCU." },
+                { name: "University of Texas System Preferred Supplier agreement for Data Center Hardware & Related Services", entity: "University of Texas System", number: "UTSSCA-UTSPSA-0063", expires: "02-29-2028", desc: "DATA CENTER HARDWARE SERVICES" },
+                { name: "State of Texas Department of Information Resources (TX DIR) Data Storage, Data Communications & Networking Equipment and Related Services Contract", entity: "Texas Department of Information Resources", number: "DIR-CPO-5371", expires: "05-14-2027", desc: "Data Storage, Data Communications & Networking Equipment and Related Services, Product, Services, APEX, TLA, FOD, DCU, Third party pending. CSG not allowed" },
             ],
             "UT": [
-                { name: "NASPO SVAR - Utah PA", entity: "State Contract", number: "CTR060024 / MA3997", desc: "Standalone third party software Dell as a reseller contract.. APEX FOD/DCU, Dell Branded HW & SW restricted. Expires 2027-04-24" },
-                { name: "Dell NASPO Computer Equipment PA - Utah", entity: "State Contract", number: "23026 / PA4283", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" },
-                { name: "Church of Jesus Christ of Latter Day Saints - Global Agreement", entity: "State Contract", number: "", desc: "Global Agreement - Full Catalog except APEX FOD Expires 2079-01-01" },
-
+                { name: "NASPO SVAR - Utah PA", entity: "State of Utah", number: "CTR060024 / MA3997", expires: "04-24-2027", desc: "Standalone third party software Dell as a reseller contract.. APEX FOD/DCU, Dell Branded HW & SW restricted." },
+                { name: "Dell NASPO Computer Equipment PA - Utah", entity: "State of Utah", number: "23026 / PA4283", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
+                { name: "Church of Jesus Christ of Latter Day Saints - Global Agreement", entity: "Church of Jesus Christ of Latter Day Saints", number: "", expires: "01-01-2079", desc: "Global Agreement - Full Catalog except APEX FOD" },
             ],
             "VT": [
 
             ],
             "VA": [
-                { name: "Fairfax County Government - IT Hardware, Software, & Related Services", entity: "State Contract", number: "4400006326", desc: "Purchase agreement -Fixed price on specified configurations and DOL on non -standard products, Apex restricted. Expires 2026-12-04" },
-                { name: "Fairfax County Public Schools - Acceptance Agreement", entity: "State Contract", number: "4400010765", desc: "DOL discounts limited to Optiplex, Lat and Precision. Not Full Catalog. Expires 2026-06-30" },
-                { name: "Information Technology Hardware and Maintenance Contract", entity: "State Contract", number: "VA-251101-DELL", desc: "Computer Hardware, Peripherals & Servers Purchase Agreement Expires 2026-10-27" },
-
+                { name: "Fairfax County Government - IT Hardware, Software, & Related Services", entity: "County of Fairfax, Virginia", number: "4400006326", expires: "12-04-2026", desc: "Purchase agreement -Fixed price on specified configurations and DOL on non -standard products, Apex restricted." },
+                { name: "Fairfax County Public Schools - Acceptance Agreement", entity: "Fairfax County Public Schools", number: "4400010765", expires: "06-30-2026", desc: "DOL discounts limited to Optiplex, Lat and Precision. Not Full Catalog." },
+                { name: "Information Technology Hardware and Maintenance Contract", entity: "The Virginia Information Technologies Agency (VITA", number: "VA-251101-DELL", expires: "10-27-2026", desc: "Computer Hardware, Peripherals & Servers Purchase Agreement" },
             ],
             "WA": [
-                { name: "WSIPC - MS EES", entity: "State Contract", number: "01-48", desc: "MS Select LAR - No Fee Expires 2027-10-31" },
-                { name: "WSU Volume Purchase Agreement", entity: "State Contract", number: "VPA - WA", desc: "Full catalog including CSG, ISG, services and thirtd party products. APEX FOD/DCU are excluded Expires 2079-01-01" },
-                { name: "WSIPC - MS Select", entity: "State Contract", number: "01-48", desc: "MS Select - MS Licensing Only Expires 2027-10-31" },
-                { name: "WSIPC RFP 20-01 Computer Hardware and Equipment Contract", entity: "State Contract", number: "WSIPC RFP 20-01", desc: "RFP 20-01 Full catalog - DOL Discounts - Apex restricted Expires 2027-12-31" },
-                { name: "EMC Master Customer Agreement for Providence Health", entity: "State Contract", number: "204963", desc: "Contract for EMC equipment and software, no discount obligation. Expires 2079-01-01" },
-                { name: "Dell NASPO Cloud Solutions PA - Washington", entity: "State Contract", number: "AR2495 / 05116", desc: "NASPO Cloud Solutions Expires 2026-09-15" },
-                { name: "NASPO SVAR - Washington PA", entity: "State Contract", number: "CTR060024 / 14922-04", desc: "Standalone third party software Dell as a reseller contract.. APEX FOD/DCU, Dell Branded HW & SW restricted. Expires 2027-04-24" },
-                { name: "Dell NASPO Computer Equipment PA - Washington", entity: "State Contract", number: "23026 / 05820", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" }
-
+                { name: "WSIPC - MS EES", entity: "Washington School Information Processing Cooperati", number: "01-48", expires: "10-31-2027", desc: "MS Select LAR - No Fee" },
+                { name: "WSU Volume Purchase Agreement", entity: "Washington State University", number: "VPA - WA", expires: "01-01-2079", desc: "Full catalog including CSG, ISG, services and thirtd party products. APEX FOD/DCU are excluded" },
+                { name: "WSIPC - MS Select", entity: "Washington School Information Processing Cooperati", number: "01-48", expires: "10-31-2027", desc: "MS Select - MS Licensing Only" },
+                { name: "WSIPC RFP 20-01 Computer Hardware and Equipment Contract", entity: "WSIPC", number: "WSIPC RFP 20-01", expires: "12-31-2027", desc: "RFP 20-01 Full catalog - DOL Discounts - Apex restricted" },
+                { name: "EMC Master Customer Agreement for Providence Health", entity: "Providence Health & Services", number: "204963", expires: "01-01-2079", desc: "Contract for EMC equipment and software, no discount obligation." },
+                { name: "Dell NASPO Cloud Solutions PA - Washington", entity: "State of Washington", number: "AR2495 / 05116", expires: "09-15-2026", desc: "NASPO Cloud Solutions" },
+                { name: "NASPO SVAR - Washington PA", entity: "State of Washington", number: "CTR060024 / 14922-04", expires: "04-24-2027", desc: "Standalone third party software Dell as a reseller contract.. APEX FOD/DCU, Dell Branded HW & SW restricted." },
+                { name: "Dell NASPO Computer Equipment PA - Washington", entity: "State of Washington", number: "23026 / 05820", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
             ],
             "WV": [
-                { name: "West Virginia University - U14WVUDELL", entity: "State Contract", number: "U14WVUDELL", desc: "Fixed price on standard configs, DOL discounts on hardaware and software, Fixed price on software licences, Apex restricted Expires 2028-12-31" },
-                { name: "Dell Microsoft EES for WV DoE", entity: "State Contract", number: "AMA 0402 0051 EDD220", desc: "CSG Catalog and third party, ISG and Apex are restricted Expires 2026-05-21" },
-                { name: "State of West Virginia Quest Active Directory Licensing (OT 24082)", entity: "State Contract", number: "CMA ISC2400000002", desc: "Fixed price Quest Active Directory Licensing Contract Expires 2026-02-28" },
-                { name: "State of West Virginia, One Identity", entity: "State Contract", number: "CMA 0947 ERP25*01", desc: "Fixed pricing on specific software licences Expires 2027-08-31" }
-
+                { name: "West Virginia University - U14WVUDELL", entity: "West Virginia University (WVU)", number: "U14WVUDELL", expires: "12-31-2028", desc: "Fixed price on standard configs, DOL discounts on hardaware and software, Fixed price on software licences, Apex restricted" },
+                { name: "Dell Microsoft EES for WV DoE", entity: "State of West Virginia DoE", number: "AMA 0402 0051 EDD220", expires: "05-21-2026", desc: "CSG Catalog and third party, ISG and Apex are restricted" },
+                { name: "State of West Virginia Quest Active Directory Licensing (OT 24082)", entity: "State of West Virginia Department of Administratio", number: "CMA ISC2400000002", expires: "02-28-2026", desc: "Fixed price Quest Active Directory Licensing Contract" },
+                { name: "State of West Virginia, One Identity", entity: "State of West Virginia, Department of Administrati", number: "CMA 0947 ERP25*01", expires: "08-31-2027", desc: "Fixed pricing on specific software licences" },
             ],
             "WI": [
-                { name: "University of Wisconsin Hospitals and Clinics US Master Agreement", entity: "State Contract", number: "", desc: "Full catalog including CSG, ISG, services and thirtd party products. APEX FOD/DCU are excluded. No DOL's - standard configurations expired Nov 2024 Expires 2027-01-06" },
-                { name: "State of Wisconsin, Dept. of Admin, Computer Equipment Contract", entity: "State Contract", number: "505ENT-M22-WICOMPUTE", desc: "CSG Catalog and third party, ISG and Apex are restricted Expires 2027-03-27" },
-                { name: "Dell NASPO Computer Equipment PA - Wisconsin", entity: "State Contract", number: "23026 / 505ENT-O24-N", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" },
-                { name: "Dell NASPO Computer Equipment PA - University of Wisconsin Madison", entity: "State Contract", number: "23026 / 505ENT-O24-N", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" }
-
+                { name: "University of Wisconsin Hospitals and Clinics US Master Agreement", entity: "University of Wisconsin Hospitals and Clinics Auth", number: "", expires: "01-06-2027", desc: "Full catalog including CSG, ISG, services and thirtd party products. APEX FOD/DCU are excluded. No DOL's - standard configurations expired Nov 2024" },
+                { name: "State of Wisconsin, Dept. of Admin, Computer Equipment Contract", entity: "State of Wisconsin, Dept. of Admin", number: "505ENT-M22-WICOMPUTE", expires: "03-27-2027", desc: "CSG Catalog and third party, ISG and Apex are restricted" },
+                { name: "Dell NASPO Computer Equipment PA - Wisconsin", entity: "State of Wisconsin", number: "23026 / 505ENT-O24-N", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
+                { name: "Dell NASPO Computer Equipment PA - University of Wisconsin Madison", entity: "University of Wisconsin Madison", number: "23026 / 505ENT-O24-N", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
             ],
             "WY": [
-                { name: "NASPO SVAR - Wyoming PA", entity: "State Contract", number: "CTR060024", desc: "Standalone third party software Dell as a reseller contract.. APEX FOD/DCU, Dell Branded HW & SW restricted. Expires 2027-04-24" },
-                { name: "Dell NASPO Computer Equipment PA - Wyoming", entity: "State Contract", number: "23026 / 234889", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW Expires 2026-06-30" }
-
+                { name: "NASPO SVAR - Wyoming PA", entity: "State of Wyoming", number: "CTR060024", expires: "04-24-2027", desc: "Standalone third party software Dell as a reseller contract.. APEX FOD/DCU, Dell Branded HW & SW restricted." },
+                { name: "Dell NASPO Computer Equipment PA - Wyoming", entity: "State of Wyoming", number: "23026 / 234889", expires: "06-30-2026", desc: "Desktops, Laptops, Tablets, Servers, and Storage, related Peripherals & Services, and including both Dell branded and 3rd party SW when sold with HW" },
             ]
         };
+
+        const stateRevenue = {
+                "AL": 16.36,
+                "AK": 24.21,
+                "AZ": 47.61,
+                "AR": 10.38,
+                "CA": 236.22,
+                "CO": 35.78,
+                "CT": 9,
+                "DE": 21.63,
+                "DC": 24.17,
+                "FL": 137.79,
+                "GA": 49.25,
+                "HI": 32.22,
+                "ID": 8.73,
+                "IL": 41.86,
+                "IN": 25.81,
+                "IA": 6.47,
+                "KS": 32.35,
+                "KY": 31.93,
+                "LA": 54.53,
+                "ME": 2.1,
+                "MD": 55.76,
+                "MA": 16.78,
+                "MI": 54.28,
+                "MN": 30.53,
+                "MS": 7.98,
+                "MO": 23.07,
+                "MT": 6.04,
+                "NE": 0,
+                "NV": 29.41,
+                "NH": 4.9,
+                "NJ": 69.76,
+                "NM": 16.41,
+                "NY": 160.03,
+                "NC": 48.01,
+                "ND": 0,
+                "OH": 37.9,
+                "OK": 30.69,
+                "OR": 31.03,
+                "PA": 39.7,
+                "RI": 5.06,
+                "SC": 38.71,
+                "SD": 1.26,
+                "TN": 51.01,
+                "TX": 227.22,
+                "UT": 3.49,
+                "VT": 0.83,
+                "VA": 43.95,
+                "WA": 61.6,
+                "WV": 3.5,
+                "WI": 10.43,
+                "WY": 0.89
+            };
 
         // 2. Global Contracts (xAll States) from CSV
         // These will be appended to every state automatically
@@ -698,7 +711,7 @@
                 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY', 'DC'
             ];
 
-            var dataRows = [['State', 'Contracts']];
+            var dataRows = [['State', 'Revenue (MM)', 'Contracts']];
 
             stateCodes.forEach(function (code) {
                 // Calculate count: Specific + Global + (MultiState if not excluded)
@@ -711,7 +724,9 @@
                     }
                 });
 
-                dataRows.push([code, count]);
+                revenue = stateRevenue[code]
+
+                dataRows.push([code, revenue, count]);
             });
 
             var data = google.visualization.arrayToDataTable(dataRows);
@@ -785,6 +800,7 @@
                             <span class="contract-name">${c.name}</span>
                             <div class="contract-details">
                                 <strong>Contract #:</strong> ${c.number}<br>
+                                <strong>Expires:</strong> ${c.expires}<br>
                                 ${c.desc}
                             </div>
                         </div>
